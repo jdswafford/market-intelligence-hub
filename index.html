@@ -224,12 +224,17 @@
 
             <!-- Major Projects (Published within Last 30 Days — 10-Item Executive List Format) -->
             <section class="bg-white border border-slate-200/80 rounded-3xl p-8 shadow-2xs">
-                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-5 border-b border-slate-100">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-5 border-b border-slate-100">
                     <div class="flex items-center space-x-3">
                         <div class="p-2 bg-slate-100 rounded-xl text-[#113E5D]">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="building-2" aria-hidden="true" class="lucide lucide-building-2 w-5 h-5"><path d="M10 12h4"></path><path d="M10 8h4"></path><path d="M14 21v-3a2 2 0 0 0-4 0v3"></path><path d="M6 10H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2"></path><path d="M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16"></path></svg>
                         </div>
                         <h2 class="text-lg font-bold text-slate-900">Major Projects (Last 30 Days)</h2>
+                    </div>
+                    <div class="flex items-center space-x-1.5 bg-slate-100 p-1 rounded-xl border border-slate-200/80 w-fit">
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-slate-500 px-2">Sort:</span>
+                        <button id="proj-sort-size" onclick="setMajorProjectsSort('size')" class="px-3 py-1 rounded-lg text-[11px] font-semibold bg-[#113E5D] text-white shadow-2xs transition cursor-pointer">By Size</button>
+                        <button id="proj-sort-region" onclick="setMajorProjectsSort('region')" class="px-3 py-1 rounded-lg text-[11px] font-semibold text-slate-600 hover:text-slate-900 transition cursor-pointer">By Region</button>
                     </div>
                 </div>
                 <div id="majorProjectsContainer" class="mt-5 max-h-[430px] overflow-y-auto pr-2 divide-y divide-slate-200/80 custom-scrollbar">
@@ -2627,7 +2632,6 @@
             <div class="bg-white border border-slate-200/80 rounded-3xl p-8 shadow-2xs">
                 <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-6 border-b border-slate-100">
                     <h2 class="text-lg font-bold text-slate-900">Advisory Firm Matrix</h2>
-                    <div id="adv-vertical-filters" class="flex flex-wrap gap-1.5"><button onclick="filterByVertical('adv', 'all')" class="px-3 py-1.5 rounded-lg text-[11px] font-semibold border transition cursor-pointer bg-[#113E5D] text-white border-[#113E5D] shadow-2xs">All Verticals</button><button onclick="filterByVertical('adv', 'Data Centers &amp; Mfg')" class="px-3 py-1.5 rounded-lg text-[11px] font-semibold border transition cursor-pointer bg-slate-50 text-slate-600 hover:bg-slate-100 border-slate-200/80">Data Centers &amp; Mfg</button><button onclick="filterByVertical('adv', 'Energy &amp; Grid')" class="px-3 py-1.5 rounded-lg text-[11px] font-semibold border transition cursor-pointer bg-slate-50 text-slate-600 hover:bg-slate-100 border-slate-200/80">Energy &amp; Grid</button><button onclick="filterByVertical('adv', 'Civil &amp; Transport')" class="px-3 py-1.5 rounded-lg text-[11px] font-semibold border transition cursor-pointer bg-slate-50 text-slate-600 hover:bg-slate-100 border-slate-200/80">Civil &amp; Transport</button><button onclick="filterByVertical('adv', 'Healthcare &amp; Life Sci')" class="px-3 py-1.5 rounded-lg text-[11px] font-semibold border transition cursor-pointer bg-slate-50 text-slate-600 hover:bg-slate-100 border-slate-200/80">Healthcare &amp; Life Sci</button><button onclick="filterByVertical('adv', 'Commercial &amp; Inst')" class="px-3 py-1.5 rounded-lg text-[11px] font-semibold border transition cursor-pointer bg-slate-50 text-slate-600 hover:bg-slate-100 border-slate-200/80">Commercial &amp; Inst</button></div>
                 </div>
                 <div id="advisoryMatrixContainer" class="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <div class="bg-slate-50/70 border border-slate-200/80 rounded-3xl overflow-hidden flex flex-col justify-between shadow-2xs group">
@@ -2635,7 +2639,7 @@
                         <div class="h-36 w-full relative overflow-hidden bg-slate-900">
                             <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Accenture" onerror="this.onerror=null;this.src='https://placehold.co/900x360/113E5D/ffffff?text=Accenture';" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-90">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/35 to-transparent"></div>
-                            <span class="absolute top-3 right-3 text-[10px] font-extrabold uppercase tracking-wider bg-[#113E5D]/95 text-amber-400 px-2.5 py-1 rounded-md border border-white/15 shadow-xs">Global Tech SI &amp; Capital Projects (NYSE: ACN • USA / Dublin EMEA / APAC)</span>
+                            <span class="absolute top-3 left-3 text-[10px] font-extrabold uppercase tracking-wider bg-amber-400 text-black px-2.5 py-1 rounded-md shadow-xs">Global • Tech SI &amp; Capital Projects (NYSE: ACN)</span>
                             <div class="absolute bottom-3 left-5 right-5 flex items-center space-x-3">
                                 <img src="https://www.google.com/s2/favicons?domain=accenture.com&amp;sz=128" alt="Accenture Logo" onerror="this.style.display='none'" class="w-9 h-9 rounded-lg bg-white p-1 shadow-md object-contain shrink-0 border border-slate-200">
                                 <h3 class="text-base sm:text-lg font-bold text-white leading-tight drop-shadow-xs">Accenture</h3>
@@ -3505,13 +3509,12 @@
     <!-- Footer (Site Navigation Link Tree + Standard Copyright + Bottom-Right Version v.50 + Beta Tag + Compact Sync Button) -->
     <footer class="border-t border-slate-200/80 bg-white mt-20 py-8 text-xs text-slate-500">
         <div class="w-full px-[15%] space-y-5">
-            <!-- Site Pages Link Tree -->
-            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-5 border-b border-slate-100">
-                <span class="text-[11px] font-extrabold uppercase tracking-wider text-[#113E5D] flex items-center space-x-1.5">
-                    <i data-lucide="git-branch" class="w-3.5 h-3.5 text-amber-500"></i>
+            <!-- Site Pages Link Tree (Centered Header Above Centered Links) -->
+            <div class="flex flex-col items-center justify-center text-center gap-2.5 pb-5 border-b border-slate-100">
+                <span class="text-[11px] font-extrabold uppercase tracking-wider text-[#113E5D] flex items-center justify-center">
                     <span>Site Directory &amp; Pages</span>
                 </span>
-                <nav aria-label="Footer Site Directory" class="flex flex-wrap items-center gap-x-4 gap-y-2 text-[11px] font-semibold text-slate-600">
+                <nav aria-label="Footer Site Directory" class="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-[11px] font-normal text-slate-600">
                     <button onclick="switchTab('overview'); window.scrollTo({top: 0, behavior: 'smooth'});" class="hover:text-[#113E5D] hover:underline transition cursor-pointer">Overview</button>
                     <span class="text-slate-300">•</span>
                     <button onclick="switchTab('arkance-news'); window.scrollTo({top: 0, behavior: 'smooth'});" class="hover:text-[#113E5D] hover:underline transition cursor-pointer">ARKANCE In The News</button>
@@ -3524,10 +3527,7 @@
                     <span class="text-slate-300">•</span>
                     <button onclick="switchTab('advisory'); window.scrollTo({top: 0, behavior: 'smooth'});" class="hover:text-[#113E5D] hover:underline transition cursor-pointer">Advisory Firm Matrix</button>
                     <span class="text-slate-300">•</span>
-                    <button onclick="switchTab('transparency'); window.scrollTo({top: 0, behavior: 'smooth'});" class="text-[#113E5D] font-bold hover:underline transition cursor-pointer flex items-center space-x-1">
-                        <i data-lucide="file-check-2" class="w-3 h-3 text-amber-500"></i>
-                        <span>Site Transparency</span>
-                    </button>
+                    <button onclick="switchTab('transparency'); window.scrollTo({top: 0, behavior: 'smooth'});" class="hover:text-[#113E5D] hover:underline transition cursor-pointer">Site Transparency</button>
                 </nav>
             </div>
 
@@ -3535,11 +3535,9 @@
             <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
                 <p class="font-medium text-slate-500">&copy; 2026 | ARKANCE. All rights reserved.</p>
                 <div class="flex items-center space-x-2">
-                    <span id="appVersionBadge" class="text-[11px] font-bold text-[#113E5D] bg-slate-100 px-3 py-1.5 rounded-lg border border-slate-200">v.52</span>
-                    <span class="bg-amber-400 text-slate-950 text-[10px] font-extrabold px-2.5 py-1.5 rounded-lg uppercase tracking-wider">Beta</span>
-                    <button id="masterRefreshBtn" onclick="refreshAllFeeds(true)" class="flex items-center space-x-1.5 bg-slate-100 hover:bg-slate-200 text-[#113E5D] text-[10px] font-bold px-2.5 py-1.5 rounded-lg border border-slate-200 transition cursor-pointer">
-                        <i data-lucide="refresh-cw" id="masterRefreshIcon" class="w-3 h-3"></i>
-                        <span id="masterRefreshText">Sync</span>
+                    <span id="appVersionBadge" class="text-[11px] font-semibold text-slate-600 bg-slate-100 px-3 py-1.5 rounded-lg border border-slate-200">v.55 Beta</span>
+                    <button id="masterRefreshBtn" onclick="refreshAllFeeds(true)" title="Sync" aria-label="Sync" class="flex items-center justify-center bg-slate-100 hover:bg-slate-200 text-[#113E5D] p-1.5 rounded-lg border border-slate-200 cursor-pointer">
+                        <i data-lucide="refresh-cw" id="masterRefreshIcon" class="w-3.5 h-3.5"></i>
                     </button>
                 </div>
             </div>
@@ -3671,11 +3669,12 @@
         // ==========================================
         // 1. CORE CONFIGURATION & DIRECT PUBLISHER ARTICLE ENGINE
         // ==========================================
-        const APP_VERSION = "v.52";
+        const APP_VERSION = "v.55";
         const SITE_ENTRY_GATE_ENABLED = false; // Toggle to true whenever you want to re-enable the initial site load password screen
         const MAX_NEWS_AGE_DAYS = 90;
         let chartInstances = {};
         let currentRegionFilter = 'Global';
+        let currentMajorProjectsSort = 'size';
         let currentSoftwareOemFilter = 'all';
         let currentAiVerticalSelection = 'all';
         let refreshCycleCount = 0;
@@ -3897,10 +3896,50 @@
             return itemVerticals.includes(activeFilter);
         }
 
-        function matchesRegionFilter(itemRegion, activeRegion = currentRegionFilter) {
+        function textMentionsRegion(rawText, activeRegion) {
             if (!activeRegion || activeRegion === 'Global') return true;
-            if (!itemRegion) return true;
-            return itemRegion === activeRegion || itemRegion === 'Global';
+            if (!rawText) return false;
+            const cleanedText = String(rawText).replace(/\b(no|without|lacks|lacking)\s+[^.,;)]*/gi, '');
+
+            if (activeRegion === 'USA') {
+                return /\b(USA|U\.S\.|United States|North America|North American|US\b|Virginia|Ohio|Texas|Arizona|California|New York|New Jersey|Boston|Massachusetts|North Carolina|Pasadena|Mountain View|Austin|Sugar Land|San Francisco|Exton|Carpinteria|Westminster|Livermore|Chicago|Dallas|Framingham|Baltimore|FHWA|IIJA|CHIPS Act|CMMC|FedRAMP|OSHA|ASCE 38-22|Local Law 97|State DOTs?|ENR Top)\b/i.test(cleanedText);
+            }
+            if (activeRegion === 'EMEA') {
+                return /\b(EMEA|Europe|European|EU\b|UK\b|U\.K\.|United Kingdom|British|Britain|London|Paris|France|French|Frankfurt|Munich|Germany|German|DACH|Dublin|Ireland|Irish|Amsterdam|Netherlands|Dutch|Benelux|Nordics?|Sweden|Swedish|Stockholm|Norway|Denmark|Danish|Finland|Finnish|Espoo|Spain|Madrid|Italy|Milan|Poland|Poznań|Czechia|Hungary|Turkey|FLAP-D|TEN-T|HS2|AMP8|Ofwat|SuedLink|Fehmarnbelt|CSRD|EPBD|CBAM|NIS2|GDPR|Golden Thread|Euroconstruct|Eurostat|FIEC|RICS|Eurocode)\b/i.test(cleanedText);
+            }
+            if (activeRegion === 'APAC') {
+                return /\b(APAC|Asia|Asian|Asia-Pacific|ANZ|Australia|Australian|Sydney|Melbourne|Brisbane|Perth|New South Wales|NSW|Victoria|Victorian|VDAS|Queensland|NABERS|AASB|SOCI Act|New Zealand|NZ\b|Auckland|Wellington|Christchurch|Seequent|Japan|Japanese|Tokyo|Hokkaido|Kumamoto|MLIT|i-Construction|Singapore|CORENET|Taiwan|Taipei|Hong Kong|India|Bengaluru)\b/i.test(cleanedText);
+            }
+            return true;
+        }
+
+        function matchesRegionFilter(itemOrRegion, activeRegion = currentRegionFilter, includeBullets = false) {
+            if (!activeRegion || activeRegion === 'Global') return true;
+            if (!itemOrRegion) return false;
+            if (typeof itemOrRegion === 'string') {
+                return itemOrRegion === activeRegion;
+            }
+            const item = itemOrRegion;
+            const headline = item.liveHeadline || item.liveTitle || item.title || '';
+            if (headline.includes(':')) {
+                const prefix = headline.split(':')[0];
+                const hasExplicitRegionInPrefix =
+                    textMentionsRegion(prefix, 'USA') ||
+                    textMentionsRegion(prefix, 'EMEA') ||
+                    textMentionsRegion(prefix, 'APAC');
+                if (hasExplicitRegionInPrefix) {
+                    return textMentionsRegion(prefix, activeRegion);
+                }
+            }
+            const parts = [
+                item.title, item.liveHeadline, item.liveTitle, item.name,
+                item.badge, item.category, item.ticker, item.metricValue,
+                item.summary, item.liveSnippet, item.note
+            ];
+            if (includeBullets && Array.isArray(item.bullets)) {
+                parts.push(...item.bullets);
+            }
+            return textMentionsRegion(parts.filter(Boolean).join(' '), activeRegion);
         }
 
         function filterByRegion(region) {
@@ -3950,11 +3989,40 @@
             lucide.createIcons();
         }
 
+        function getProjectCapexNumeric(project) {
+            if (!project) return 0;
+            const val = parseFloat(String(project.capex || '0').replace(/[^0-9.]/g, ''));
+            return isNaN(val) ? 0 : val;
+        }
+
+        function setMajorProjectsSort(sortMode) {
+            currentMajorProjectsSort = sortMode === 'region' ? 'region' : 'size';
+            const sizeBtn = document.getElementById('proj-sort-size');
+            const regBtn = document.getElementById('proj-sort-region');
+            const activeCls = 'px-3 py-1 rounded-lg text-[11px] font-semibold bg-[#113E5D] text-white shadow-2xs transition cursor-pointer';
+            const inactiveCls = 'px-3 py-1 rounded-lg text-[11px] font-semibold text-slate-600 hover:text-slate-900 transition cursor-pointer';
+            if (sizeBtn) sizeBtn.className = currentMajorProjectsSort === 'size' ? activeCls : inactiveCls;
+            if (regBtn) regBtn.className = currentMajorProjectsSort === 'region' ? activeCls : inactiveCls;
+            renderMajorProjects();
+            lucide.createIcons();
+        }
+
         function renderMajorProjects() {
             const container = document.getElementById('majorProjectsContainer');
             if (!container) return;
             const filter = activeVerticalFilters.overview || 'all';
-            const list = majorProjectsData.filter(p => matchesVerticalFilter(p.verticals, filter) && matchesRegionFilter(p.region));
+            const regionOrder = { 'USA': 1, 'EMEA': 2, 'APAC': 3, 'Global': 4 };
+            const list = majorProjectsData
+                .filter(p => matchesVerticalFilter(p.verticals, filter) && matchesRegionFilter(p))
+                .slice()
+                .sort((a, b) => {
+                    if (currentMajorProjectsSort === 'region') {
+                        const rA = regionOrder[a.region] || 99;
+                        const rB = regionOrder[b.region] || 99;
+                        if (rA !== rB) return rA - rB;
+                    }
+                    return getProjectCapexNumeric(b) - getProjectCapexNumeric(a);
+                });
             container.innerHTML = list.map(p => {
                 const directUrl = resolveSpecificArticleUrl(p.liveArticleUrl || p.url, p.liveHeadline || p.title, p.sourceName);
                 return `
@@ -3986,7 +4054,7 @@
             const container = document.getElementById('macroPulseContainer');
             if (!container) return;
             const filter = activeVerticalFilters.overview || 'all';
-            const list = macroPulseData.filter(m => matchesVerticalFilter(m.verticals, filter) && matchesRegionFilter(m.region));
+            const list = macroPulseData.filter(m => matchesVerticalFilter(m.verticals, filter) && matchesRegionFilter(m));
             container.innerHTML = list.map(m => {
                 const directUrl = resolveSpecificArticleUrl(m.liveArticleUrl || m.url, m.liveHeadline || m.title, m.sourceName);
                 const imgUrl = getContextualImage(m, m.badge || 'Macro Indicator');
@@ -3997,7 +4065,7 @@
                         <div onclick="openItemDetail('macro', '${m.id}')" class="h-40 w-full overflow-hidden relative bg-slate-900 cursor-pointer">
                             <img src="${imgUrl}" alt="${(m.title || '').replace(/"/g, '&quot;')}" onerror="this.onerror=null;this.src='${fallbackImg}';" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-95">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/25 to-transparent"></div>
-                            <span class="absolute top-3 left-3 text-[10px] font-bold uppercase tracking-wider bg-amber-400 text-slate-950 px-2.5 py-1 rounded-md shadow-xs">${m.badge}</span>
+                            <span class="absolute top-3 left-3 text-[10px] font-extrabold uppercase tracking-wider bg-amber-400 text-black px-2.5 py-1 rounded-md shadow-xs">${m.badge}</span>
                             <span class="absolute bottom-3 left-3 text-xs font-extrabold text-white bg-[#113E5D]/95 px-2.5 py-1 rounded-md border border-white/20 shadow-xs">${m.metricValue}</span>
                         </div>
                         <div class="p-6 pb-2">
@@ -4048,7 +4116,7 @@
             if (!container) return;
             renderVerticalFilterBar('wire-vertical-filters', 'overview');
             const filter = activeVerticalFilters.overview || 'all';
-            const list = liveWireStories.filter(s => matchesVerticalFilter(s.verticals, filter) && matchesRegionFilter(s.region));
+            const list = liveWireStories.filter(s => matchesVerticalFilter(s.verticals, filter) && matchesRegionFilter(s));
             container.innerHTML = list.map(s => {
                 const directUrl = resolveSpecificArticleUrl(s.liveArticleUrl || s.url, s.liveHeadline || s.title, s.sourceName);
                 const imgUrl = getContextualImage(s, s.sourceName || 'Market Wire');
@@ -4099,7 +4167,7 @@
             if (headerStampEl) {
                 headerStampEl.textContent = `Rate as of: ${window.latestStockQuoteTimestamp || fallbackStamp}`;
             }
-            const list = stockTrackerData.filter(st => matchesRegionFilter(st.region));
+            const list = stockTrackerData.filter(st => matchesRegionFilter(st));
             container.innerHTML = list.map(st => {
                 const badgeCls = st.isPositive
                     ? 'bg-emerald-50 text-emerald-700 border-emerald-200'
@@ -4168,7 +4236,7 @@
                             <div onclick="openItemDetail('arkance', '${a.id}')" class="h-44 w-full overflow-hidden relative bg-slate-900 cursor-pointer">
                                 <img src="${imgUrl}" alt="${(a.title || '').replace(/"/g, '&quot;')}" onerror="this.onerror=null;this.src='${fallbackImg}';" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-95">
                                 <div class="absolute inset-0 bg-gradient-to-t from-slate-950/75 via-slate-950/20 to-transparent"></div>
-                                <span class="absolute top-3 left-3 text-[10px] font-bold uppercase tracking-wider bg-[#113E5D] text-amber-400 px-2.5 py-1 rounded-md border border-white/15 shadow-xs">${a.badge}</span>
+                                <span class="absolute top-3 left-3 text-[10px] font-extrabold uppercase tracking-wider bg-amber-400 text-black px-2.5 py-1 rounded-md shadow-xs">${a.badge}</span>
                                 <span class="absolute bottom-3 right-3 text-[11px] text-slate-200 font-medium">${a.liveDate || getDynamicDateLabel(a.daysAgo)}</span>
                             </div>
                             <div class="p-6 pb-2">
@@ -4194,7 +4262,7 @@
             if (!container) return;
             renderVerticalFilterBar('reg-vertical-filters', 'reg');
             const filter = activeVerticalFilters.reg || 'all';
-            const list = regulatoryData.filter(r => matchesVerticalFilter(r.verticals, filter) && matchesRegionFilter(r.region));
+            const list = regulatoryData.filter(r => matchesVerticalFilter(r.verticals, filter) && matchesRegionFilter(r));
             container.innerHTML = list.map(r => {
                 const directUrl = resolveSpecificArticleUrl(r.liveArticleUrl || r.url, r.liveHeadline || r.title, r.sourceName);
                 const imgUrl = getContextualImage(r, r.badge || 'Compliance');
@@ -4205,7 +4273,7 @@
                         <div onclick="openItemDetail('regulatory', '${r.id}')" class="h-44 w-full overflow-hidden relative bg-slate-900 cursor-pointer">
                             <img src="${imgUrl}" alt="${(r.title || '').replace(/"/g, '&quot;')}" onerror="this.onerror=null;this.src='${fallbackImg}';" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-95">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-950/75 via-slate-950/20 to-transparent"></div>
-                            <span class="absolute top-3 left-3 text-[10px] font-bold uppercase tracking-wider bg-amber-400 text-slate-950 px-2.5 py-1 rounded-md shadow-xs">${r.badge}</span>
+                            <span class="absolute top-3 left-3 text-[10px] font-extrabold uppercase tracking-wider bg-amber-400 text-black px-2.5 py-1 rounded-md shadow-xs">${r.badge}</span>
                             <span class="absolute bottom-3 right-3 text-[11px] text-slate-200 font-medium">${r.liveDate || getDynamicDateLabel(r.daysAgo)}</span>
                         </div>
                         <div class="p-6 pb-2">
@@ -4228,28 +4296,35 @@
         function renderMatrixCards(containerId, dataList, matrixType, filterSectionKey) {
             const container = document.getElementById(containerId);
             if (!container) return;
-            const vFilter = activeVerticalFilters[filterSectionKey] || 'all';
-            const filtered = dataList.map((comp, idx) => ({ comp, idx })).filter(({ comp }) => {
-                if (!matchesVerticalFilter(comp.verticals, vFilter)) return false;
-                if (!matchesRegionFilter(comp.region)) return false;
+            const isAdvisory = matrixType === 'advisory';
+            const vFilter = isAdvisory ? 'all' : (activeVerticalFilters[filterSectionKey] || 'all');
+            const filtered = dataList.map((comp, idx) => {
+                const matchingStories = (comp.stories || [])
+                    .map((st, sIdx) => ({ st, sIdx }))
+                    .filter(({ st }) => matchesRegionFilter(st, currentRegionFilter, true));
+                return { comp, idx, matchingStories };
+            }).filter(({ comp, matchingStories }) => {
+                if (!isAdvisory && !matchesVerticalFilter(comp.verticals, vFilter)) return false;
+                if (!matchesRegionFilter(comp, currentRegionFilter, false)) return false;
+                if (matchingStories.length === 0) return false;
                 if (matrixType === 'software' && currentSoftwareOemFilter !== 'all') {
                     return comp.relationship === currentSoftwareOemFilter;
                 }
                 return true;
             });
 
-            container.innerHTML = filtered.map(({ comp, idx }) => {
+            container.innerHTML = filtered.map(({ comp, idx, matchingStories }) => {
                 const heroImgUrl = getContextualImage(comp, comp.name);
                 const fallbackHero = `https://placehold.co/900x360/113E5D/ffffff?text=${encodeURIComponent(comp.name)}`;
                 const logoUrl = getCompanyFaviconUrl(comp.name);
 
-                const storiesHtml = (comp.stories || []).slice(0, 3).map((st, sIdx) => {
+                const storiesHtml = matchingStories.slice(0, 3).map(({ st, sIdx }, displayIdx) => {
                     const directUrl = resolveSpecificArticleUrl(st.liveArticleUrl || st.url, st.liveTitle || st.title, st.sourceName || comp.name);
                     const bulletsHtml = (st.bullets || []).slice(0, 2).map(b => `<li class="flex items-start space-x-2 text-xs text-slate-600 leading-relaxed"><span class="text-amber-500 font-bold">•</span><span>${b}</span></li>`).join('');
                     return `
                     <div class="bg-white border border-slate-200/80 rounded-xl p-4 space-y-2.5 hover:border-[#113E5D]/40 transition">
                         <div class="flex items-center justify-between gap-2 text-[10px] text-slate-500 font-semibold">
-                            <span class="text-[#113E5D] font-bold uppercase tracking-wider">Story ${sIdx + 1} • ${st.sourceName || comp.name}</span>
+                            <span class="text-[#113E5D] font-bold uppercase tracking-wider">Story ${displayIdx + 1} • ${st.sourceName || comp.name}</span>
                             <span>${st.liveDate || getDynamicDateLabel(sIdx * 3 + 2)}</span>
                         </div>
                         <h4 onclick="openMatrixStoryDetail('${matrixType}', ${idx}, ${sIdx})" class="text-xs sm:text-sm font-bold text-slate-900 hover:text-[#113E5D] cursor-pointer leading-snug">${st.liveTitle || st.title}</h4>
@@ -4270,15 +4345,15 @@
                         <div class="h-36 w-full relative overflow-hidden bg-slate-900">
                             <img src="${heroImgUrl}" alt="${(comp.name || '').replace(/"/g, '&quot;')}" onerror="this.onerror=null;this.src='${fallbackHero}';" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-90">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/35 to-transparent"></div>
-                            <span class="absolute top-3 right-3 text-[10px] font-extrabold uppercase tracking-wider bg-[#113E5D]/95 text-amber-400 px-2.5 py-1 rounded-md border border-white/15 shadow-xs">${comp.badge}</span>
+                            <span class="absolute top-3 left-3 text-[10px] font-extrabold uppercase tracking-wider bg-amber-400 text-black px-2.5 py-1 rounded-md shadow-xs">${comp.badge}</span>
                             <div class="absolute bottom-3 left-5 right-5 flex items-center space-x-3">
                                 <img src="${logoUrl}" alt="${comp.name} Logo" onerror="this.style.display='none'" class="w-9 h-9 rounded-lg bg-white p-1 shadow-md object-contain shrink-0 border border-slate-200">
                                 <h3 class="text-base sm:text-lg font-bold text-white leading-tight drop-shadow-xs">${comp.name}</h3>
                             </div>
                         </div>
                         <div class="p-6 sm:p-7 pb-4">
-                            ${renderCardTagBar(comp.verticals)}
-                            <p class="text-xs sm:text-sm text-slate-600 mt-3 leading-relaxed">${comp.summary}</p>
+                            ${isAdvisory ? '' : renderCardTagBar(comp.verticals)}
+                            <p class="text-xs sm:text-sm text-slate-600 ${isAdvisory ? '' : 'mt-3'} leading-relaxed">${comp.summary}</p>
                         </div>
                     </div>
                     <div class="px-6 sm:px-7 pb-6 sm:pb-7 space-y-3.5">
@@ -4299,7 +4374,6 @@
         }
 
         function renderAdvisoryMatrix() {
-            renderVerticalFilterBar('adv-vertical-filters', 'adv');
             renderMatrixCards('advisoryMatrixContainer', advisoryMatrixData, 'advisory', 'adv');
         }
 
@@ -4535,11 +4609,6 @@
 
         async function refreshAllFeeds(isManual = false) {
             const btn = document.getElementById('masterRefreshBtn');
-            const icon = document.getElementById('masterRefreshIcon');
-            const text = document.getElementById('masterRefreshText');
-
-            if (icon) icon.classList.add('animate-spin');
-            if (text) text.textContent = 'Syncing...';
             if (btn) btn.disabled = true;
 
             refreshCycleCount++;
@@ -4619,15 +4688,7 @@
             renderAllSections();
             renderAiMarketingOverview();
 
-            if (icon) icon.classList.remove('animate-spin');
-            if (text) text.textContent = isManual ? '✓ Updated!' : 'Sync';
             if (btn) btn.disabled = false;
-
-            if (isManual && text) {
-                setTimeout(() => {
-                    text.textContent = 'Sync';
-                }, 2200);
-            }
         }
 
         function switchTab(tabId) {
@@ -4883,7 +4944,7 @@
                 category: `${comp.name} • ${label}`,
                 date: st.liveDate || getDynamicDateLabel(storyIdx * 3 + 2),
                 title: st.liveTitle || st.title,
-                verticals: comp.verticals || [],
+                verticals: matrixType === 'advisory' ? [] : (comp.verticals || []),
                 sourceName: st.sourceName || comp.name,
                 publisherIcon: st.publisherIcon || getCompanyFaviconUrl(comp.name, comp),
                 liveHeadline: st.liveTitle || st.title,

@@ -418,7 +418,7 @@ window.majorProjectsData = [
 window.macroPulseData = [
     {
         "id": "macro-1",
-        "badge": "Leading Demand (9–12 Mos)",
+        "badge": "Global • Leading Demand (9–12 Mos)",
         "metricValue": "50.8 US ABI / +14% UK/EU RICS",
         "title": "Global Architecture & Engineering Workloads: USA AIA ABI (50.8), UK/EU RICS (+14%) & ANZ/APAC Indices Signal Expansion",
         "sourceName": "AIA",
@@ -441,7 +441,7 @@ window.macroPulseData = [
     {
         "id": "macro-2",
         "metricValue": "+14.2% US DMI / +15.4% EU Civil",
-        "badge": "Earliest Planning (12+ Mos)",
+        "badge": "Global • Earliest Planning (12+ Mos)",
         "title": "Global Early-Stage Planning: USA Dodge Momentum Index (+14.2%), EMEA Euroconstruct/Barbour ABI (+15.4%) & APAC BCI",
         "sourceName": "Dodge Construction Network",
         "url": "https://www.construction.com/news/",
@@ -463,7 +463,7 @@ window.macroPulseData = [
     {
         "id": "macro-3",
         "metricValue": "8.9 Mos US / 9.2 Mos EU Backlog",
-        "badge": "Backlog & Central Bank Rates",
+        "badge": "Global • Backlog & Central Bank Rates",
         "title": "Global Contractor Backlogs & Credit: USA ABC Backlog (8.9 Mos) & Fed SLOOS vs. EMEA FIEC (9.2 Mos) & APAC Order Books",
         "sourceName": "ABC",
         "url": "https://www.abc.org/Economics/Construction-Backlog-Indicator",
@@ -484,7 +484,7 @@ window.macroPulseData = [
     {
         "id": "macro-4",
         "metricValue": "65K+ US IIJA / £104B UK AMP8",
-        "badge": "Sovereign Infrastructure Flow",
+        "badge": "Global • Sovereign Infrastructure Flow",
         "title": "Sovereign Infrastructure Disbursements: USA IIJA/CHIPS, EU NextGenerationEU / UK £104B AMP8 & APAC MLIT / ANZ A$120B",
         "sourceName": "FHWA",
         "url": "https://www.fhwa.dot.gov/construction/bim/roadmap.cfm",
@@ -505,7 +505,7 @@ window.macroPulseData = [
     {
         "id": "macro-5",
         "metricValue": "85–110 Wk Switchgear Lead Time",
-        "badge": "Supply Chain & Cost Indices",
+        "badge": "Global • Supply Chain & Cost Indices",
         "title": "Global Supply Chain & Input Costs: USA BLS PPI & Tariffs, EMEA Eurostat/BCIS & CBAM Carbon, and APAC Material Indices",
         "sourceName": "ENR",
         "url": "https://www.enr.com/topics/214-transportation",
@@ -526,7 +526,7 @@ window.macroPulseData = [
     {
         "id": "macro-6",
         "metricValue": "439K US / 300K+ EU Labor Gap",
-        "badge": "Labor & Automation Catalyst",
+        "badge": "Global • Labor & Automation Catalyst",
         "title": "Global AEC Skilled Labor & Engineering Deficit: USA ABC/BLS (439K+), EMEA VDI/CITB (300K+) & APAC/ANZ Drive AI & DfMA",
         "sourceName": "Construction Dive",
         "url": "https://www.constructiondive.com/topic/technology/",
@@ -680,7 +680,7 @@ window.arkanceNewsData = [
     {
         "id": "ark-1",
         "title": "ARKANCE Scales Global Platinum & Sapphire Partner Footprint Across USA, 18 EMEA Countries & Australia/NZ (ANZ)",
-        "badge": "Global Scale (USA / EMEA / ANZ)",
+        "badge": "Global • Platinum & Sapphire Scale",
         "daysAgo": 2,
         "sourceName": "ARKANCE USA",
         "url": "https://www.arkance.us/about-arkance",
@@ -700,7 +700,7 @@ window.arkanceNewsData = [
     {
         "id": "ark-2",
         "title": "ARKANCE Be.Smart Portfolio (Holixa & Smartaps) Automates Revit, Civil 3D & Plant Workflows Across USA, EMEA & ANZ",
-        "badge": "Proprietary IP (Be.Smart)",
+        "badge": "Global • Proprietary IP (Be.Smart)",
         "daysAgo": 6,
         "sourceName": "ARKANCE UK",
         "url": "https://www.arkance.uk/be-smart-software",
@@ -720,7 +720,7 @@ window.arkanceNewsData = [
     {
         "id": "ark-3",
         "title": "ARKANCE North America (USA) Accelerates DOT Digital Delivery, Heavy Civil & Hyperscale Data Center Execution",
-        "badge": "USA Infrastructure & Fab",
+        "badge": "USA • Infrastructure & Fab",
         "daysAgo": 10,
         "sourceName": "ARKANCE USA",
         "url": "https://www.arkance.us/industries/civil-infrastructure",
@@ -740,7 +740,7 @@ window.arkanceNewsData = [
     {
         "id": "ark-4",
         "title": "ARKANCE UK & EMEA Lead Building Safety Act \"Golden Thread\", EU CSRD Carbon & £104B AMP8 Water Rollouts",
-        "badge": "EMEA Regulatory & Water",
+        "badge": "EMEA • Regulatory & Water",
         "daysAgo": 14,
         "sourceName": "ARKANCE UK",
         "url": "https://www.arkance.uk/services/bim-iso-19650-consulting",
@@ -760,7 +760,7 @@ window.arkanceNewsData = [
     {
         "id": "ark-5",
         "title": "ARKANCE ANZ (Australia & New Zealand) Scales ISO 19650 Digital Engineering for Metro Rail, Water & Renewable Grid Projects",
-        "badge": "APAC / ANZ Infrastructure",
+        "badge": "APAC • ANZ Infrastructure",
         "daysAgo": 18,
         "sourceName": "ARKANCE ANZ",
         "url": "https://www.arkance.au/digital-construction-solutions",
@@ -780,7 +780,7 @@ window.arkanceNewsData = [
     {
         "id": "ark-6",
         "title": "Pinnacle Series Multilingual LMS & ARKANCE Enablement Drive Global Enterprise BIM Adoption Across USA, EMEA & APAC",
-        "badge": "Global Workforce Enablement",
+        "badge": "Global • Workforce Enablement",
         "daysAgo": 22,
         "sourceName": "ARKANCE USA",
         "url": "https://www.arkance.us/pinnacle-series",
@@ -932,7 +932,7 @@ window.softwareOemData = [
     {
         "name": "Autodesk",
         "relationship": "partner",
-        "badge": "Core Ecosystem OEM (NASDAQ: ADSK • Global: USA / EMEA / APAC)",
+        "badge": "Global • Core Ecosystem OEM (NASDAQ: ADSK)",
         "verticals": [
             "Data Centers & Mfg",
             "Civil & Transport",
@@ -981,7 +981,7 @@ window.softwareOemData = [
     {
         "name": "Nemetschek Group / Bluebeam",
         "relationship": "partner",
-        "badge": "Strategic Partner OEM (ETR: NEM • Global: USA / Germany HQ / APAC)",
+        "badge": "Global • Strategic Partner OEM (ETR: NEM)",
         "verticals": [
             "Data Centers & Mfg",
             "Commercial & Inst",
@@ -1029,7 +1029,7 @@ window.softwareOemData = [
     {
         "name": "Egnyte",
         "relationship": "partner",
-        "badge": "Cloud & Cyber Partner OEM (USA HQ / UK & EU / Global)",
+        "badge": "Global • Cloud & Cyber Partner OEM",
         "verticals": [
             "Civil & Transport",
             "Energy & Grid",
@@ -1077,7 +1077,7 @@ window.softwareOemData = [
     {
         "name": "Procore Technologies",
         "relationship": "competing",
-        "badge": "Competing OEM (NYSE: PCOR • USA HQ / EMEA / APAC)",
+        "badge": "Global • Competing Field OEM (NYSE: PCOR)",
         "verticals": [
             "Commercial & Inst",
             "Data Centers & Mfg",
@@ -1125,7 +1125,7 @@ window.softwareOemData = [
     {
         "name": "Bentley Systems",
         "relationship": "competing",
-        "badge": "Competing OEM (NASDAQ: BSY • USA HQ / Dublin EMEA / APAC)",
+        "badge": "Global • Competing Civil OEM (NASDAQ: BSY)",
         "verticals": [
             "Civil & Transport",
             "Energy & Grid"
@@ -1171,7 +1171,7 @@ window.softwareOemData = [
     {
         "name": "Trimble",
         "relationship": "competing",
-        "badge": "Competing OEM (NASDAQ: TRMB • USA HQ / Finland Tekla / APAC)",
+        "badge": "Global • Competing BIM & GNSS OEM (NASDAQ: TRMB)",
         "verticals": [
             "Civil & Transport",
             "Data Centers & Mfg",
@@ -1218,7 +1218,7 @@ window.softwareOemData = [
     {
         "name": "Aurigo Software",
         "relationship": "partner",
-        "badge": "Public Owner Partner OEM (Austin, USA HQ / Global Infrastructure)",
+        "badge": "USA & Global • Public Owner Partner OEM",
         "verticals": [
             "Civil & Transport",
             "Energy & Grid"
@@ -1264,7 +1264,7 @@ window.softwareOemData = [
     {
         "name": "HCSS",
         "relationship": "partner",
-        "badge": "Heavy Civil Partner OEM (Sugar Land, Texas USA HQ)",
+        "badge": "USA • Heavy Civil Partner OEM",
         "verticals": [
             "Civil & Transport",
             "Energy & Grid",
@@ -1311,7 +1311,7 @@ window.softwareOemData = [
     {
         "name": "Slate.ai",
         "relationship": "partner",
-        "badge": "AI Analytics Partner OEM (California, USA HQ / EMEA / Global)",
+        "badge": "Global • AI Analytics Partner OEM",
         "verticals": [
             "Data Centers & Mfg",
             "Healthcare & Life Sci",
@@ -1358,7 +1358,7 @@ window.softwareOemData = [
     {
         "name": "Topcon Positioning Systems",
         "relationship": "competing",
-        "badge": "Positioning OEM (TYO: 7732 • Tokyo APAC HQ / California USA / NL EMEA)",
+        "badge": "Global • 3D Positioning OEM (TYO: 7732)",
         "verticals": [
             "Civil & Transport",
             "Data Centers & Mfg",
@@ -1405,7 +1405,7 @@ window.softwareOemData = [
     {
         "name": "OFC Desk",
         "relationship": "partner",
-        "badge": "MEP & DfMA Partner OEM (Global: USA / EMEA / APAC)",
+        "badge": "Global • MEP & DfMA Partner OEM",
         "verticals": [
             "Data Centers & Mfg",
             "Healthcare & Life Sci",
@@ -1452,7 +1452,7 @@ window.softwareOemData = [
     {
         "name": "CivCore",
         "relationship": "partner",
-        "badge": "Civil & Subsurface Partner OEM (USA / EMEA / Global Infrastructure)",
+        "badge": "USA & EMEA • Civil & Subsurface Partner OEM",
         "verticals": [
             "Civil & Transport",
             "Energy & Grid"
@@ -1500,7 +1500,7 @@ window.softwareOemData = [
 window.channelMatrixData = [
     {
         "name": "ARKANCE (Global #1 Benchmark: USA, EMEA & APAC/ANZ)",
-        "badge": "Index Score: 94 • Global: USA / 18 EMEA Countries / ANZ",
+        "badge": "Global • #1 Platinum & Sapphire Partner (Score: 94)",
         "verticals": [
             "Data Centers & Mfg",
             "Civil & Transport",
@@ -1548,7 +1548,7 @@ window.channelMatrixData = [
     },
     {
         "name": "Graitec",
-        "badge": "Index Score: 82 • Transatlantic: EMEA (Paris HQ / UK) & North America (USA/CA)",
+        "badge": "EMEA & USA • Transatlantic Platinum Partner (Score: 82)",
         "verticals": [
             "Commercial & Inst",
             "Data Centers & Mfg",
@@ -1594,7 +1594,7 @@ window.channelMatrixData = [
     },
     {
         "name": "Symetri (Addnode Group)",
-        "badge": "Index Score: 80 • Transatlantic: Nordics/UK (Stockholm HQ) & USA (STO: ANOD-B)",
+        "badge": "EMEA & USA • Public Platinum Partner (Score: 80)",
         "verticals": [
             "Data Centers & Mfg",
             "Commercial & Inst",
@@ -1640,7 +1640,7 @@ window.channelMatrixData = [
     },
     {
         "name": "NTI Group",
-        "badge": "Index Score: 79 • Pure EMEA Consolidator (Denmark HQ / 12 European Countries)",
+        "badge": "EMEA • European VAR Consolidator (Score: 79)",
         "verticals": [
             "Commercial & Inst",
             "Data Centers & Mfg",
@@ -1686,7 +1686,7 @@ window.channelMatrixData = [
     },
     {
         "name": "IMAGINiT Technologies (Rand Worldwide)",
-        "badge": "Index Score: 77 • Pure North America VAR (USA & Canada • OTCQX: RWWI)",
+        "badge": "USA • North American Platinum VAR (Score: 77)",
         "verticals": [
             "Data Centers & Mfg",
             "Civil & Transport",
@@ -1732,7 +1732,7 @@ window.channelMatrixData = [
     },
     {
         "name": "Man and Machine (Mensch und Maschine)",
-        "badge": "Index Score: 75 • EMEA Specialist (Germany HQ, UK & EU • ETR: MUM)",
+        "badge": "EMEA • European Platinum Specialist (Score: 75)",
         "verticals": [
             "Civil & Transport",
             "Data Centers & Mfg",
@@ -1781,7 +1781,7 @@ window.channelMatrixData = [
 window.advisoryMatrixData = [
     {
         "name": "Accenture",
-        "badge": "Global Tech SI & Capital Projects (NYSE: ACN • USA / Dublin EMEA / APAC)",
+        "badge": "Global • Tech SI & Capital Projects (NYSE: ACN)",
         "verticals": [
             "Data Centers & Mfg",
             "Energy & Grid",
@@ -1827,7 +1827,7 @@ window.advisoryMatrixData = [
     },
     {
         "name": "Deloitte",
-        "badge": "Global Capital Projects Advisory (USA / London UK HQ / APAC)",
+        "badge": "Global • Capital Projects Advisory",
         "verticals": [
             "Civil & Transport",
             "Energy & Grid",
@@ -1873,7 +1873,7 @@ window.advisoryMatrixData = [
     },
     {
         "name": "Capgemini",
-        "badge": "Global SI & Digital Twin Leader (EPA: CAP • Paris HQ / USA / APAC)",
+        "badge": "Global • SI & Digital Twin Leader (EPA: CAP)",
         "verticals": [
             "Energy & Grid",
             "Data Centers & Mfg",
@@ -1919,7 +1919,7 @@ window.advisoryMatrixData = [
     },
     {
         "name": "McKinsey & Company",
-        "badge": "Global Executive Strategy & Capital Excellence (USA / EMEA / APAC)",
+        "badge": "Global • Executive Strategy & Capital Excellence",
         "verticals": [
             "Data Centers & Mfg",
             "Energy & Grid",
@@ -1965,7 +1965,7 @@ window.advisoryMatrixData = [
     },
     {
         "name": "PwC",
-        "badge": "Global Capital Projects, M&A & ESG Advisory (USA / London UK HQ / APAC)",
+        "badge": "Global • Capital Projects, M&A & ESG Advisory",
         "verticals": [
             "Energy & Grid",
             "Commercial & Inst",
@@ -2011,7 +2011,7 @@ window.advisoryMatrixData = [
     },
     {
         "name": "EY (Ernst & Young)",
-        "badge": "Global Infrastructure, Real Estate & Cyber Risk (USA / London HQ / APAC)",
+        "badge": "Global • Infrastructure, Real Estate & Cyber Risk",
         "verticals": [
             "Commercial & Inst",
             "Energy & Grid",
@@ -2057,7 +2057,7 @@ window.advisoryMatrixData = [
     },
     {
         "name": "KPMG",
-        "badge": "Global Infrastructure & PMO Governance (USA / Amstelveen NL & UK / APAC)",
+        "badge": "Global • Infrastructure & PMO Governance",
         "verticals": [
             "Civil & Transport",
             "Healthcare & Life Sci",
