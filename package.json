@@ -4,10 +4,19 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --port=3000 --host=0.0.0.0",
-    "build": "vite build && cp data.js dist/data.js"
+    "dev": "tsx server.ts",
+    "build": "vite build && cp data.js dist/data.js",
+    "start": "tsx server.ts"
   },
   "devDependencies": {
     "vite": "^5.0.0"
+  },
+  "dependencies": {
+    "@google/genai": "^2.32.0",
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.10.0",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "tsx": "^4.19.2"
   }
 }

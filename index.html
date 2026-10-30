@@ -2,7 +2,10 @@
 <html lang="en"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AEC Market Intelegence Hub (Beta)</title>
+    <title>AEC Market Intelligence Hub (Beta)</title>
+    <meta name="description" content="Global AEC market intelligence, capital projects, regulatory compliance, software OEM, channel partner, and advisory firm analytics hub.">
+    <meta property="og:title" content="AEC Market Intelligence Hub (Beta)">
+    <meta property="og:description" content="Global AEC market intelligence, capital projects, regulatory compliance, software OEM, channel partner, and advisory firm analytics hub.">
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -149,42 +152,98 @@
                     </div>
                 </div>
 
-                <!-- SECTION 1: Two-Column Bullet Points (Title Removed) -->
-                <div class="bg-white/5 border border-white/10 rounded-2xl p-5">
-                    <div id="geminiExecutiveNarrative" class="text-xs sm:text-sm text-slate-100 leading-relaxed">
-                <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2.5 text-xs sm:text-sm text-slate-100 leading-relaxed">
-                    <li class="flex items-start space-x-2">
-                        <span class="text-amber-400 font-bold mt-0.5">•</span>
-                        <span><strong>30-Day CapEx Velocity:</strong> Global awards surged in hyperscale AI &amp; fabs (<strong>+28.0% YoY</strong> across USA, EMEA FLAP-D &amp; Japan), HVDC grid upgrades (<strong>+22.0%</strong>), and public rail/water lettings (<strong>+16.0%</strong>).</span>
-                    </li>
-                    <li class="flex items-start space-x-2">
-                        <span class="text-amber-400 font-bold mt-0.5">•</span>
-                        <span><strong>Leading Design Pipelines:</strong> 9-to-18-month expansion holds across the <strong>USA</strong> (50.8 AIA ABI; +14.2% Dodge DMI), <strong>EMEA</strong> (+14% RICS; +15.4% Euroconstruct civil), and <strong>APAC</strong> (A$120B ANZ &amp; Japan MLIT).</span>
-                    </li>
-                    <li class="flex items-start space-x-2">
-                        <span class="text-amber-400 font-bold mt-0.5">•</span>
-                        <span><strong>Backlogs &amp; Bottlenecks:</strong> Tier-1 backlogs remain strong (<strong>8.9 mos USA</strong>; <strong>9.2 mos EU</strong>), while <strong>85–110 wk switchgear queues</strong> and skilled labor gaps (<strong>439K+ US; 300K+ EU</strong>) accelerate off-site DfMA.</span>
-                    </li>
-                    <li class="flex items-start space-x-2">
-                        <span class="text-amber-400 font-bold mt-0.5">•</span>
-                        <span><strong>ConTech &amp; CDE Adoption:</strong> Public ConTech equities rose <strong>+18.9% YoY (+1.20% session)</strong> as US FHWA/CMMC, UK/EU ISO 19650, and APAC mandates push Cloud CDE adoption to <strong>86%</strong>.</span>
-                    </li>
-                </ul>
-            </div>
+                <!-- DAILY UPDATE: 60-Second Daily Podcast Audio Bite (Once Daily, Just Below Header Break) -->
+                <div id="dailyAudioBriefingBar" class="bg-white/10 border border-white/15 rounded-2xl px-4 py-3.5 sm:px-5 sm:py-4">
+                    <audio id="dailyRadioAudioEl" preload="metadata" class="hidden"></audio>
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                        <!-- Left: Play/Pause Button + Clean Title -->
+                        <div class="flex items-center space-x-3.5 min-w-0">
+                            <button id="radioBriefPlayBtn" onclick="toggleDailyRadioBriefingPlay()" title="Play Daily Audio Update" class="w-10 h-10 rounded-xl bg-white hover:bg-slate-100 text-[#113E5D] flex items-center justify-center shrink-0 shadow-xs transition cursor-pointer">
+                                <i id="radioBriefPlayIcon" data-lucide="play" class="w-4 h-4 fill-current ml-0.5"></i>
+                            </button>
+                            <div class="min-w-0">
+                                <h3 class="text-xs sm:text-sm font-bold text-white leading-snug truncate">Daily Executive Audio Update</h3>
+                                <p id="radioBriefStatusBadge" class="text-[11px] text-slate-300 font-normal truncate">60-Second Daily Briefing</p>
+                            </div>
+                        </div>
+
+                        <!-- Right: Scrubber + Timer + Speed Toggle -->
+                        <div class="flex items-center gap-2.5 sm:justify-end">
+                            <div class="flex items-center space-x-3 bg-slate-950/35 border border-white/10 rounded-xl px-3.5 py-2 min-w-[200px] sm:min-w-[260px] flex-1 sm:flex-initial">
+                                <input id="radioBriefScrubber" type="range" min="0" max="100" value="0" step="0.1" oninput="seekRadioBriefAudio(this.value)" class="w-full h-1.5 bg-white/20 rounded-lg appearance-none cursor-pointer accent-white">
+                                <span id="radioBriefTimeDisplay" class="text-[11px] font-mono text-slate-200 whitespace-nowrap">0:00 / 1:00</span>
+                            </div>
+                            <button id="radioBriefSpeedBtn" onclick="cycleRadioBriefSpeed()" title="Playback Speed" class="px-2.5 py-2 rounded-xl bg-white/10 hover:bg-white/20 border border-white/15 text-[11px] font-semibold text-white transition cursor-pointer shrink-0">
+                                1x
+                            </button>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- SECTION 2: Two Side-by-Side Graphs (Filterable Construction Vertical Growth vs. Combined Public ConTech Equity Index) -->
+                <!-- SECTION 1: Simple Bullets & Sub-Bullets (Zero Commas) -->
+                <div class="bg-white/5 border border-white/10 rounded-2xl p-5">
+                    <div id="geminiExecutiveNarrative" class="text-xs sm:text-sm text-slate-100 leading-relaxed">
+                        <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 text-xs sm:text-sm text-slate-100 leading-relaxed">
+                            <li class="space-y-1.5">
+                                <div class="flex items-start space-x-2">
+                                    <span class="text-amber-400 font-bold mt-0.5">•</span>
+                                    <strong class="text-white">30-Day CapEx Growth</strong>
+                                </div>
+                                <ul class="pl-5 space-y-1 text-xs text-slate-200 list-disc">
+                                    <li>Hyperscale AI and chip fabs up 28% YoY</li>
+                                    <li>High-voltage grid upgrades up 22% YoY</li>
+                                    <li>Public rail and water projects up 16% YoY</li>
+                                </ul>
+                            </li>
+                            <li class="space-y-1.5">
+                                <div class="flex items-start space-x-2">
+                                    <span class="text-amber-400 font-bold mt-0.5">•</span>
+                                    <strong class="text-white">Design Pipelines (9–18 Months)</strong>
+                                </div>
+                                <ul class="pl-5 space-y-1 text-xs text-slate-200 list-disc">
+                                    <li>USA: 50.8 AIA Billings Index and +14.2% Dodge Momentum</li>
+                                    <li>EMEA: +14% RICS workload and +15.4% civil growth</li>
+                                    <li>APAC: A$120B ANZ pipeline and Japan MLIT digital delivery</li>
+                                </ul>
+                            </li>
+                            <li class="space-y-1.5">
+                                <div class="flex items-start space-x-2">
+                                    <span class="text-amber-400 font-bold mt-0.5">•</span>
+                                    <strong class="text-white">Backlogs &amp; Supply Bottlenecks</strong>
+                                </div>
+                                <ul class="pl-5 space-y-1 text-xs text-slate-200 list-disc">
+                                    <li>Tier-1 contractor backlogs at 8.9 months (USA) and 9.2 months (EU)</li>
+                                    <li>High-voltage switchgear lead times at 85 to 110 weeks</li>
+                                    <li>Skilled labor shortages driving 40% off-site prefabrication</li>
+                                </ul>
+                            </li>
+                            <li class="space-y-1.5">
+                                <div class="flex items-start space-x-2">
+                                    <span class="text-amber-400 font-bold mt-0.5">•</span>
+                                    <strong class="text-white">Global Digital &amp; Cloud Adoption</strong>
+                                </div>
+                                <ul class="pl-5 space-y-1 text-xs text-slate-200 list-disc">
+                                    <li>Enterprise Cloud CDE adoption at 86% worldwide</li>
+                                    <li>USA federal FHWA BIM and DoD CMMC 2.0 compliance</li>
+                                    <li>UK/EU ISO 19650 and Singapore CORENET X mandates</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- SECTION 2: Two Side-by-Side Graphs (Construction Growth Velocity by Vertical vs. 30-Day Active Projects Worldwide by Vertical) -->
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 pt-1">
                     
                     <!-- Left Graph: Construction Growth Filterable by Vertical -->
                     <div class="bg-white text-slate-900 rounded-2xl p-5 shadow-xs flex flex-col justify-between space-y-4">
                         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3 border-b border-slate-100">
                             <div>
-                                <span class="text-[10px] font-extrabold uppercase tracking-wider text-[#113E5D] block">Section 2A • Sector Expansion</span>
+                                <span class="text-[10px] font-extrabold uppercase tracking-wider text-[#113E5D] block">Sector Expansion</span>
                                 <h3 class="text-sm font-bold text-slate-900">Construction Growth Velocity (% YoY)</h3>
                             </div>
                             <select id="aiVerticalChartFilter" onchange="updateAiConstructionVerticalChart(this.value)" class="text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-[#113E5D] rounded-lg px-3 py-1.5 border border-slate-200 focus:outline-none cursor-pointer">
-                                <option value="all">All Verticals (Composite +16.2%)</option>
+                                <option value="all">All Verticals (+16.2% YoY)</option>
                                 <option value="Data Centers &amp; Mfg">Data Centers &amp; Mfg (+28.0% YoY)</option>
                                 <option value="Energy &amp; Grid">Energy &amp; Grid (+22.0% YoY)</option>
                                 <option value="Civil &amp; Transport">Civil &amp; Transport (+16.0% YoY)</option>
@@ -193,29 +252,29 @@
                             </select>
                         </div>
                         <div class="h-56 relative w-full">
-                            <canvas id="aiConstructionGrowthChart" width="537" height="336" style="display: block; box-sizing: border-box; height: 224px; width: 358.6px;"></canvas>
+                            <canvas id="aiConstructionGrowthChart"></canvas>
                         </div>
                         <div class="flex items-center justify-between text-[11px] text-slate-500 pt-2 border-t border-slate-100">
-                            <span id="aiVerticalChartCaption">Showing: Composite All-Vertical Construction Growth (+16.2% YoY)</span>
-                            <span class="font-semibold text-emerald-700"> Dodge / AIA (USA) • Euroconstruct / RICS (EMEA) • MLIT / BCI (APAC)</span>
+                            <span id="aiVerticalChartCaption">All-Vertical Construction Growth (+16.2% YoY)</span>
+                            <span class="font-semibold text-emerald-700">USA • EMEA • APAC</span>
                         </div>
                     </div>
 
-                    <!-- Right Graph: Combined Construction Technology Growth (Publicly Traded Cohort Index) -->
+                    <!-- Right Graph: 30-Day Active Projects Worldwide by Vertical -->
                     <div class="bg-white text-slate-900 rounded-2xl p-5 shadow-xs flex flex-col justify-between space-y-4">
                         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3 border-b border-slate-100">
                             <div>
-                                <span class="text-[10px] font-extrabold uppercase tracking-wider text-[#113E5D] block">Section 2B • Public ConTech Cohort</span>
-                                <h3 class="text-sm font-bold text-slate-900">Combined Construction Tech Market Metric</h3>
+                                <span class="text-[10px] font-extrabold uppercase tracking-wider text-[#113E5D] block">30-Day Global Activity</span>
+                                <h3 class="text-sm font-bold text-slate-900">Active Projects Worldwide by Vertical (Last 30 Days)</h3>
                             </div>
-                            <span id="aiConTechCompositeBadge" class="text-[11px] font-bold bg-emerald-50 text-emerald-700 border border-emerald-200 px-2.5 py-1 rounded-lg w-fit">+18.9% YoY (+1.20% Avg Day)</span>
+                            <span id="aiActiveProjectsTotalBadge" class="text-[11px] font-bold bg-emerald-50 text-emerald-700 border border-emerald-200 px-2.5 py-1 rounded-lg w-fit">~14,250 Active Projects</span>
                         </div>
                         <div class="h-56 relative w-full">
-                            <canvas id="aiConTechEquityChart" width="537" height="336" style="display: block; box-sizing: border-box; height: 224px; width: 358.6px;"></canvas>
+                            <canvas id="aiConTechEquityChart"></canvas>
                         </div>
                         <div class="flex items-center justify-between text-[11px] text-slate-500 pt-2 border-t border-slate-100">
-                            <span class="truncate pr-2">11 Public Tickers: ADSK, PCOR, NEM, BSY, TRMB, ANOD-B, MUM, RWWI, 7732, CAP, ACN</span>
-                            <span class="font-semibold text-[#113E5D] shrink-0">Morningstar / Exchange Composite</span>
+                            <span class="truncate pr-2">Estimated active projects worldwide over the last 30 days</span>
+                            <span class="font-semibold text-[#113E5D] shrink-0">Global Project Estimate</span>
                         </div>
                     </div>
 
@@ -229,12 +288,18 @@
                         <div class="p-2 bg-slate-100 rounded-xl text-[#113E5D]">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="building-2" aria-hidden="true" class="lucide lucide-building-2 w-5 h-5"><path d="M10 12h4"></path><path d="M10 8h4"></path><path d="M14 21v-3a2 2 0 0 0-4 0v3"></path><path d="M6 10H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2"></path><path d="M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16"></path></svg>
                         </div>
-                        <h2 class="text-lg font-bold text-slate-900">Major Projects (Last 30 Days)</h2>
+                        <h2 class="text-lg font-bold text-slate-900">Major Projects &amp; GTM Account Mapping (Last 30 Days)</h2>
                     </div>
-                    <div class="flex items-center space-x-1.5 bg-slate-100 p-1 rounded-xl border border-slate-200/80 w-fit">
-                        <span class="text-[10px] font-bold uppercase tracking-wider text-slate-500 px-2">Sort:</span>
-                        <button id="proj-sort-size" onclick="setMajorProjectsSort('size')" class="px-3 py-1 rounded-lg text-[11px] font-semibold bg-[#113E5D] text-white shadow-2xs transition cursor-pointer">By Size</button>
-                        <button id="proj-sort-region" onclick="setMajorProjectsSort('region')" class="px-3 py-1 rounded-lg text-[11px] font-semibold text-slate-600 hover:text-slate-900 transition cursor-pointer">By Region</button>
+                    <div class="flex flex-wrap items-center gap-2">
+                        <button onclick="exportMajorProjectsGtmCsv()" class="px-3 py-1.5 rounded-xl text-[11px] font-bold bg-amber-400 hover:bg-amber-300 text-slate-950 shadow-2xs transition cursor-pointer flex items-center space-x-1.5">
+                            <i data-lucide="download" class="w-3.5 h-3.5"></i>
+                            <span>Export GTM Targets (CSV)</span>
+                        </button>
+                        <div class="flex items-center space-x-1.5 bg-slate-100 p-1 rounded-xl border border-slate-200/80 w-fit">
+                            <span class="text-[10px] font-bold uppercase tracking-wider text-slate-500 px-2">Sort:</span>
+                            <button id="proj-sort-size" onclick="setMajorProjectsSort('size')" class="px-3 py-1 rounded-lg text-[11px] font-semibold bg-[#113E5D] text-white shadow-2xs transition cursor-pointer">By Size</button>
+                            <button id="proj-sort-region" onclick="setMajorProjectsSort('region')" class="px-3 py-1 rounded-lg text-[11px] font-semibold text-slate-600 hover:text-slate-900 transition cursor-pointer">By Region</button>
+                        </div>
                     </div>
                 </div>
                 <div id="majorProjectsContainer" class="mt-5 max-h-[430px] overflow-y-auto pr-2 divide-y divide-slate-200/80 custom-scrollbar">
@@ -598,14 +663,17 @@
 
             <!-- Live Signal Feeds & Market Wire -->
             <section class="bg-white border border-slate-200/80 rounded-3xl p-8 shadow-2xs">
-                <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-6 border-b border-slate-100">
-                    <div class="flex items-center space-x-3">
-                        <div class="p-2 bg-slate-100 rounded-xl text-[#113E5D]">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="newspaper" aria-hidden="true" class="lucide lucide-newspaper w-5 h-5"><path d="M15 18h-5"></path><path d="M18 14h-8"></path><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-4 0v-9a2 2 0 0 1 2-2h2"></path><rect width="8" height="4" x="10" y="6" rx="1"></rect></svg>
+                <div class="flex flex-col gap-3 pb-6 border-b border-slate-100">
+                    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+                        <div class="flex items-center space-x-3">
+                            <div class="p-2 bg-slate-100 rounded-xl text-[#113E5D]">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="newspaper" aria-hidden="true" class="lucide lucide-newspaper w-5 h-5"><path d="M15 18h-5"></path><path d="M18 14h-8"></path><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-4 0v-9a2 2 0 0 1 2-2h2"></path><rect width="8" height="4" x="10" y="6" rx="1"></rect></svg>
+                            </div>
+                            <h2 class="text-lg font-bold text-slate-900">Live Signal Feeds &amp; Market Wire</h2>
                         </div>
-                        <h2 class="text-lg font-bold text-slate-900">Live Signal Feeds &amp; Market Wire</h2>
+                        <div id="wire-vertical-filters" class="flex flex-wrap gap-1.5"></div>
                     </div>
-                    <div id="wire-vertical-filters" class="flex flex-wrap gap-1.5"><button onclick="filterByVertical('overview', 'all')" class="px-3 py-1.5 rounded-lg text-[11px] font-semibold border transition cursor-pointer bg-[#113E5D] text-white border-[#113E5D] shadow-2xs">All Verticals</button><button onclick="filterByVertical('overview', 'Data Centers &amp; Mfg')" class="px-3 py-1.5 rounded-lg text-[11px] font-semibold border transition cursor-pointer bg-slate-50 text-slate-600 hover:bg-slate-100 border-slate-200/80">Data Centers &amp; Mfg</button><button onclick="filterByVertical('overview', 'Energy &amp; Grid')" class="px-3 py-1.5 rounded-lg text-[11px] font-semibold border transition cursor-pointer bg-slate-50 text-slate-600 hover:bg-slate-100 border-slate-200/80">Energy &amp; Grid</button><button onclick="filterByVertical('overview', 'Civil &amp; Transport')" class="px-3 py-1.5 rounded-lg text-[11px] font-semibold border transition cursor-pointer bg-slate-50 text-slate-600 hover:bg-slate-100 border-slate-200/80">Civil &amp; Transport</button><button onclick="filterByVertical('overview', 'Healthcare &amp; Life Sci')" class="px-3 py-1.5 rounded-lg text-[11px] font-semibold border transition cursor-pointer bg-slate-50 text-slate-600 hover:bg-slate-100 border-slate-200/80">Healthcare &amp; Life Sci</button><button onclick="filterByVertical('overview', 'Commercial &amp; Inst')" class="px-3 py-1.5 rounded-lg text-[11px] font-semibold border transition cursor-pointer bg-slate-50 text-slate-600 hover:bg-slate-100 border-slate-200/80">Commercial &amp; Inst</button></div>
+                    <div id="wire-pillar-filters" class="flex flex-wrap items-center gap-1.5 pt-1"></div>
                 </div>
 
                 <!-- Scrollable News Feed -->
@@ -754,6 +822,41 @@
                         </div>
                     </div>
                 </div></div>
+            </section>
+
+            <!-- Marketing Enablement: Share of Voice & Positioning Tracker + Key AEC Industry Calendar -->
+            <section class="bg-white border border-slate-200/80 rounded-3xl p-8 shadow-2xs space-y-8">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-5 border-b border-slate-100">
+                    <div class="flex items-center space-x-3">
+                        <div class="p-2 bg-slate-100 rounded-xl text-[#113E5D]">
+                            <i data-lucide="megaphone" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <h2 class="text-lg font-bold text-slate-900">Marketing Enablement: Share of Voice &amp; Positioning Tracker</h2>
+                            <p class="text-xs text-slate-500">Core AEC positioning pillars, campaign hooks, and Tier-1 industry conference &amp; CFP milestones</p>
+                        </div>
+                    </div>
+                    <span class="text-[10px] font-extrabold uppercase tracking-wider bg-amber-400 text-black px-3 py-1 rounded-md w-fit">GTM Marketing Hub</span>
+                </div>
+
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <h3 class="text-xs font-extrabold uppercase tracking-wider text-[#113E5D]">Core Positioning Pillar Matrix (Click Pillar to Filter Live Signal Wire)</h3>
+                        <button onclick="setMarketingPillarFilter('all')" class="text-[11px] font-semibold text-slate-500 hover:text-[#113E5D] cursor-pointer">Reset Pillar Filter</button>
+                    </div>
+                    <div id="marketingPositioningContainer" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-4"></div>
+                </div>
+
+                <div class="pt-4 border-t border-slate-100">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+                        <div class="flex items-center space-x-2">
+                            <i data-lucide="calendar" class="w-4 h-4 text-[#113E5D]"></i>
+                            <h3 class="text-xs font-extrabold uppercase tracking-wider text-[#113E5D]">Key AEC Industry Calendar &amp; Competitor Summits (CFP &amp; Booth Deadlines)</h3>
+                        </div>
+                        <span class="text-[11px] text-slate-500">Filtered by active Global / Regional selector</span>
+                    </div>
+                    <div id="industryCalendarContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+                </div>
             </section>
 
             <!-- Cloud & Digital Transformation Trajectory Chart -->
@@ -1391,7 +1494,8 @@
                             <button onclick="filterSoftwareOemType('competing')" id="oem-type-competing" class="px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 text-slate-600 hover:bg-slate-200 cursor-pointer transition">Competing OEMs (4)</button>
                         </div>
                     </div>
-                    <div id="soft-vertical-filters" class="flex flex-wrap gap-1.5"><button onclick="filterByVertical('soft', 'all')" class="px-3 py-1.5 rounded-lg text-[11px] font-semibold border transition cursor-pointer bg-[#113E5D] text-white border-[#113E5D] shadow-2xs">All Verticals</button><button onclick="filterByVertical('soft', 'Data Centers &amp; Mfg')" class="px-3 py-1.5 rounded-lg text-[11px] font-semibold border transition cursor-pointer bg-slate-50 text-slate-600 hover:bg-slate-100 border-slate-200/80">Data Centers &amp; Mfg</button><button onclick="filterByVertical('soft', 'Energy &amp; Grid')" class="px-3 py-1.5 rounded-lg text-[11px] font-semibold border transition cursor-pointer bg-slate-50 text-slate-600 hover:bg-slate-100 border-slate-200/80">Energy &amp; Grid</button><button onclick="filterByVertical('soft', 'Civil &amp; Transport')" class="px-3 py-1.5 rounded-lg text-[11px] font-semibold border transition cursor-pointer bg-slate-50 text-slate-600 hover:bg-slate-100 border-slate-200/80">Civil &amp; Transport</button><button onclick="filterByVertical('soft', 'Healthcare &amp; Life Sci')" class="px-3 py-1.5 rounded-lg text-[11px] font-semibold border transition cursor-pointer bg-slate-50 text-slate-600 hover:bg-slate-100 border-slate-200/80">Healthcare &amp; Life Sci</button><button onclick="filterByVertical('soft', 'Commercial &amp; Inst')" class="px-3 py-1.5 rounded-lg text-[11px] font-semibold border transition cursor-pointer bg-slate-50 text-slate-600 hover:bg-slate-100 border-slate-200/80">Commercial &amp; Inst</button></div>
+                    <div id="soft-vertical-filters" class="flex flex-wrap gap-1.5"></div>
+                    <div id="soft-workflow-filters" class="flex flex-wrap items-center gap-1.5 pt-1"></div>
                 </div>
                 <div id="softwareMatrixContainer" class="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <div class="bg-slate-50/70 border border-slate-200/80 rounded-3xl overflow-hidden flex flex-col justify-between shadow-2xs group">
@@ -2175,6 +2279,59 @@
                     </div>
                 </div></div>
             </div>
+
+            <!-- Private/Scale-Up Disruptor & Public Industrial Matrix -->
+            <section class="bg-white border border-slate-200/80 rounded-3xl p-8 shadow-2xs space-y-6">
+                <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-5 border-b border-slate-100">
+                    <div>
+                        <div class="flex items-center space-x-2.5">
+                            <span class="text-[10px] font-extrabold uppercase tracking-wider bg-amber-400 text-black px-2.5 py-0.5 rounded-md">Expanded Cohort</span>
+                            <h3 class="text-lg font-bold text-slate-900">Private Scale-Up Disruptor &amp; Public Industrial AEC Matrix</h3>
+                        </div>
+                        <p class="text-xs text-slate-500 mt-1">Reality Capture (OpenSpace, DroneDeploy), Generative AI (TestFit, Hypar, Finch3D), Pre-Con Estimating (DESTINI, Togal.AI, HCSS), CDE Collaboration (Bluebeam, Revizto, Asite) &amp; Public Industrial Leaders (Hexagon, Dassault, Schneider/Siemens)</p>
+                    </div>
+                    <div id="disruptor-category-filters" class="flex flex-wrap gap-1.5">
+                        <button onclick="filterDisruptorCategory('all')" data-cat="all" class="px-3 py-1.5 rounded-lg text-[11px] font-semibold bg-[#113E5D] text-white cursor-pointer transition">All Segments</button>
+                        <button onclick="filterDisruptorCategory('Reality Capture')" data-cat="Reality Capture" class="px-3 py-1.5 rounded-lg text-[11px] font-semibold bg-slate-100 text-slate-600 hover:bg-slate-200 cursor-pointer transition">Reality Capture</button>
+                        <button onclick="filterDisruptorCategory('AI & Generative Feasibility')" data-cat="AI & Generative Feasibility" class="px-3 py-1.5 rounded-lg text-[11px] font-semibold bg-slate-100 text-slate-600 hover:bg-slate-200 cursor-pointer transition">AI &amp; Generative Feasibility</button>
+                        <button onclick="filterDisruptorCategory('Specialized Pre-Con & Estimating')" data-cat="Specialized Pre-Con & Estimating" class="px-3 py-1.5 rounded-lg text-[11px] font-semibold bg-slate-100 text-slate-600 hover:bg-slate-200 cursor-pointer transition">Pre-Con &amp; Estimating</button>
+                        <button onclick="filterDisruptorCategory('CDE & Niche Collaboration')" data-cat="CDE & Niche Collaboration" class="px-3 py-1.5 rounded-lg text-[11px] font-semibold bg-slate-100 text-slate-600 hover:bg-slate-200 cursor-pointer transition">CDE &amp; Collaboration</button>
+                        <button onclick="filterDisruptorCategory('Public Industrial & Reality Capture')" data-cat="Public Industrial & Reality Capture" class="px-3 py-1.5 rounded-lg text-[11px] font-semibold bg-slate-100 text-slate-600 hover:bg-slate-200 cursor-pointer transition">Public Industrial</button>
+                    </div>
+                </div>
+                <div id="disruptorMatrixContainer" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6"></div>
+            </section>
+
+            <!-- Product Enablement: Interoperability & OpenBIM Radar -->
+            <section class="bg-white border border-slate-200/80 rounded-3xl p-8 shadow-2xs space-y-6">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-5 border-b border-slate-100">
+                    <div>
+                        <div class="flex items-center space-x-2.5">
+                            <span class="text-[10px] font-extrabold uppercase tracking-wider bg-[#113E5D] text-amber-400 px-2.5 py-0.5 rounded-md">Product Enablement</span>
+                            <h3 class="text-lg font-bold text-slate-900">Interoperability &amp; OpenBIM Technical Moat Radar</h3>
+                        </div>
+                        <p class="text-xs text-slate-500 mt-1">Ecosystem capability matrix evaluating open API documentation, Webhook/MCP maturity, Marketplace ecosystems, and buildingSMART IFC4.3 / BCF / ISO 19650 / FedRAMP compliance</p>
+                    </div>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="border-b border-slate-200 text-[10px] font-extrabold uppercase tracking-wider text-slate-500 bg-slate-50/80">
+                                <th class="py-3 px-4 rounded-tl-xl">Vendor / Platform</th>
+                                <th class="py-3 px-4">Open API Docs</th>
+                                <th class="py-3 px-4">Webhooks &amp; Event Bus</th>
+                                <th class="py-3 px-4">App Marketplace</th>
+                                <th class="py-3 px-4">IFC4 / IFC4.3</th>
+                                <th class="py-3 px-4">BCF Support</th>
+                                <th class="py-3 px-4">ISO 19650 CDE</th>
+                                <th class="py-3 px-4">CMMC / FedRAMP</th>
+                                <th class="py-3 px-4 rounded-tr-xl text-right">Sales Battlecard</th>
+                            </tr>
+                        </thead>
+                        <tbody id="interoperabilityRadarContainer" class="divide-y divide-slate-200/70 text-xs"></tbody>
+                    </table>
+                </div>
+            </section>
         </div>
 
         <!-- ========================================== -->
@@ -3535,7 +3692,7 @@
             <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
                 <p class="font-medium text-slate-500">&copy; 2026 | ARKANCE. All rights reserved.</p>
                 <div class="flex items-center space-x-2">
-                    <span id="appVersionBadge" class="text-[11px] font-semibold text-slate-600 bg-slate-100 px-3 py-1.5 rounded-lg border border-slate-200">v.55 Beta</span>
+                    <span id="appVersionBadge" class="text-[11px] font-semibold text-slate-600 bg-slate-100 px-3 py-1.5 rounded-lg border border-slate-200">v.58 Beta</span>
                     <button id="masterRefreshBtn" onclick="refreshAllFeeds(true)" title="Sync" aria-label="Sync" class="flex items-center justify-center bg-slate-100 hover:bg-slate-200 text-[#113E5D] p-1.5 rounded-lg border border-slate-200 cursor-pointer">
                         <i data-lucide="refresh-cw" id="masterRefreshIcon" class="w-3.5 h-3.5"></i>
                     </button>
@@ -3626,6 +3783,60 @@
         </div>
     </div>
 
+    <!-- Sales Enablement: Battlecard & Objection Engine Modal -->
+    <div id="battlecardModal" onclick="if(event.target === this) closeBattlecardModal()" class="fixed inset-0 bg-slate-900/65 backdrop-blur-xs z-50 hidden items-center justify-center p-4 overflow-y-auto" style="display: none;">
+        <div class="bg-white border border-slate-200 rounded-3xl max-w-3xl w-full p-6 sm:p-8 shadow-2xl relative my-8 space-y-6 max-h-[90vh] overflow-y-auto">
+            <button onclick="closeBattlecardModal()" class="absolute top-5 right-5 text-slate-400 hover:text-slate-700 bg-slate-100 hover:bg-slate-200 p-2 rounded-full transition cursor-pointer">
+                <i data-lucide="x" class="w-4 h-4"></i>
+            </button>
+            <div class="space-y-2 pr-8 border-b border-slate-100 pb-4">
+                <div class="flex flex-wrap items-center gap-2">
+                    <span class="text-[10px] font-extrabold uppercase tracking-wider bg-amber-400 text-black px-2.5 py-1 rounded-md">Sales Enablement • Battlecard &amp; Objection Engine</span>
+                    <span id="bcModalRelationshipBadge" class="text-[10px] font-bold uppercase tracking-wider bg-[#113E5D] text-white px-2.5 py-1 rounded-md">GTM Playbook</span>
+                </div>
+                <h3 id="bcModalVendorTitle" class="text-lg sm:text-xl font-extrabold text-slate-900">Vendor Battlecard</h3>
+                <div id="bcModalWorkflowTags" class="flex flex-wrap gap-1.5 pt-1"></div>
+            </div>
+
+            <!-- Licensing Model Breakdown -->
+            <div class="bg-slate-50 border border-slate-200/80 rounded-2xl p-5 space-y-1.5">
+                <div class="flex items-center space-x-2 text-[#113E5D]">
+                    <i data-lucide="credit-card" class="w-4 h-4"></i>
+                    <span class="text-[11px] font-extrabold uppercase tracking-wider">Commercial &amp; Licensing Model Breakdown</span>
+                </div>
+                <p id="bcModalLicensing" class="text-xs sm:text-sm text-slate-700 font-medium leading-relaxed"></p>
+            </div>
+
+            <!-- Why Us vs. Competitor Talking Points -->
+            <div class="bg-emerald-50/60 border border-emerald-200/80 rounded-2xl p-5 space-y-3">
+                <div class="flex items-center space-x-2 text-emerald-900">
+                    <i data-lucide="shield-check" class="w-4 h-4 text-emerald-700"></i>
+                    <span class="text-[11px] font-extrabold uppercase tracking-wider">Why ARKANCE Partner Ecosystem vs. Single-Vendor Lock-In</span>
+                </div>
+                <ul id="bcModalWhyUsList" class="space-y-2 text-xs sm:text-sm text-slate-800 leading-relaxed"></ul>
+            </div>
+
+            <!-- Landmine & Trap Discovery Questions -->
+            <div class="bg-amber-50/70 border border-amber-200/90 rounded-2xl p-5 space-y-3">
+                <div class="flex items-center space-x-2 text-amber-950">
+                    <i data-lucide="crosshair" class="w-4 h-4 text-amber-600"></i>
+                    <span class="text-[11px] font-extrabold uppercase tracking-wider">3 Landmine &amp; Trap Discovery Questions (For GC / EPC / Owner Buyers)</span>
+                </div>
+                <ol id="bcModalLandminesList" class="space-y-2.5 text-xs sm:text-sm text-slate-800 leading-relaxed list-decimal list-inside"></ol>
+            </div>
+
+            <div class="pt-2 flex flex-col sm:flex-row items-center justify-between gap-3 border-t border-slate-100">
+                <button onclick="copyBattlecardToClipboard()" id="bcCopyBtn" class="w-full sm:w-auto bg-[#113E5D] hover:bg-[#0B293F] text-white font-bold text-xs py-2.5 px-5 rounded-xl transition flex items-center justify-center space-x-2 cursor-pointer">
+                    <i data-lucide="copy" class="w-3.5 h-3.5 text-amber-400"></i>
+                    <span>Copy Battlecard Brief for CRM / Call Prep</span>
+                </button>
+                <button onclick="closeBattlecardModal()" class="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold text-xs transition cursor-pointer">
+                    Close Battlecard
+                </button>
+            </div>
+        </div>
+    </div>
+
     <!-- GitHub Admin Modal (Strictly Hidden by Default) -->
     <div id="githubModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-xs z-50 hidden items-center justify-center p-4" style="display: none;">
         <div class="bg-white border border-slate-200 rounded-3xl max-w-md w-full p-7 shadow-2xl relative space-y-4">
@@ -3658,7 +3869,7 @@
                 <div id="ghStatusMsg" class="p-3 rounded-lg text-xs font-medium bg-amber-50 text-amber-800 border border-amber-200">Links validated. Publishing v.46 Beta snapshot to jdswafford/market-intelligence-hub...</div>
                 <button id="ghPushBtn" onclick="pushToGitHub()" class="w-full bg-[#113E5D] hover:bg-[#0B293F] text-white font-bold py-2.5 px-4 rounded-xl transition flex items-center justify-center space-x-2 shadow-xs cursor-pointer">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="upload-cloud" aria-hidden="true" class="lucide lucide-upload-cloud w-4 h-4 text-amber-400"><path d="M12 13v8"></path><path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242"></path><path d="m8 17 4-4 4 4"></path></svg>
-                    <span>Validate Links &amp; Push Snapshot (v.46 Beta)</span>
+                    <span>Validate Links &amp; Push Snapshot (v.58 Beta)</span>
                 </button>
             </div>
         </div>
@@ -3669,7 +3880,7 @@
         // ==========================================
         // 1. CORE CONFIGURATION & DIRECT PUBLISHER ARTICLE ENGINE
         // ==========================================
-        const APP_VERSION = "v.55";
+        const APP_VERSION = "v.58";
         const SITE_ENTRY_GATE_ENABLED = false; // Toggle to true whenever you want to re-enable the initial site load password screen
         const MAX_NEWS_AGE_DAYS = 90;
         let chartInstances = {};
@@ -3949,6 +4160,9 @@
                 selectEl.value = currentRegionFilter;
             }
             renderAllSections();
+            if (typeof syncRadioBriefingScopeUI === 'function') {
+                syncRadioBriefingScopeUI();
+            }
             lucide.createIcons();
         }
 
@@ -3970,6 +4184,9 @@
             renderAllSections();
             if (sectionKey === 'overview') {
                 updateAiConstructionVerticalChart(verticalId);
+                if (typeof syncRadioBriefingScopeUI === 'function') {
+                    syncRadioBriefingScopeUI();
+                }
             }
             lucide.createIcons();
         }
@@ -4007,12 +4224,23 @@
             lucide.createIcons();
         }
 
-        function renderMajorProjects() {
-            const container = document.getElementById('majorProjectsContainer');
-            if (!container) return;
+        let currentMarketingPillarFilter = 'all';
+        let currentWorkflowStageFilter = 'all';
+        let currentDisruptorCategoryFilter = 'all';
+        let activeBattlecardVendor = null;
+
+        function normalizeStringArray(val, fallback = []) {
+            if (Array.isArray(val)) return val;
+            if (typeof val === 'string' && val.trim()) {
+                return val.split(/\s*[•,|]\s*/).map(s => s.trim()).filter(Boolean);
+            }
+            return fallback;
+        }
+
+        function getSortedFilteredMajorProjects() {
             const filter = activeVerticalFilters.overview || 'all';
             const regionOrder = { 'USA': 1, 'EMEA': 2, 'APAC': 3, 'Global': 4 };
-            const list = majorProjectsData
+            return (majorProjectsData || [])
                 .filter(p => matchesVerticalFilter(p.verticals, filter) && matchesRegionFilter(p))
                 .slice()
                 .sort((a, b) => {
@@ -4023,19 +4251,65 @@
                     }
                     return getProjectCapexNumeric(b) - getProjectCapexNumeric(a);
                 });
+        }
+
+        function exportMajorProjectsGtmCsv() {
+            const list = getSortedFilteredMajorProjects();
+            const headers = ['Project ID', 'CapEx', 'Region', 'Category', 'Project Title', 'Assigned Tier-1 Contractors', 'Target Software Stack & Mandates', 'GTM Action Trigger', 'Source'];
+            const rows = list.map(p => [
+                p.id,
+                p.capex,
+                p.region,
+                p.category,
+                (p.liveHeadline || p.title || '').replace(/"/g, '""'),
+                (normalizeStringArray(p.assignedContractors, ['Tier-1 EPC / GC Joint Venture']).join(' | ')).replace(/"/g, '""'),
+                (p.targetSoftwareStack || '').replace(/"/g, '""'),
+                (p.gtmActionTrigger || '').replace(/"/g, '""'),
+                p.sourceName || ''
+            ]);
+            const csvContent = [headers.join(','), ...rows.map(r => r.map(c => `"${c}"`).join(','))].join('\n');
+            const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `arkance-gtm-major-projects-${currentRegionFilter.toLowerCase()}.csv`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+
+        function renderMajorProjects() {
+            const container = document.getElementById('majorProjectsContainer');
+            if (!container) return;
+            const list = getSortedFilteredMajorProjects();
             container.innerHTML = list.map(p => {
                 const directUrl = resolveSpecificArticleUrl(p.liveArticleUrl || p.url, p.liveHeadline || p.title, p.sourceName);
+                const contractorList = normalizeStringArray(p.assignedContractors, ['Tier-1 EPC / GC Joint Venture']);
+                const contractors = contractorList.map(c => `<span class="text-[10px] font-bold bg-slate-100 text-[#113E5D] px-2 py-0.5 rounded border border-slate-200/90">${c}</span>`).join('');
                 return `
-                <div class="py-4 first:pt-2 last:pb-1 px-3 -mx-3 rounded-2xl hover:bg-slate-50/90 transition flex flex-col lg:flex-row lg:items-center justify-between gap-4 group">
-                    <div class="space-y-1.5 flex-1 min-w-0">
+                <div class="py-4 first:pt-2 last:pb-1 px-3 -mx-3 rounded-2xl hover:bg-slate-50/90 transition flex flex-col lg:flex-row lg:items-start justify-between gap-4 group">
+                    <div class="space-y-2 flex-1 min-w-0">
                         <div class="flex flex-wrap items-center gap-2">
                             <span class="text-[10px] font-extrabold uppercase tracking-wider bg-[#113E5D] text-amber-400 px-2.5 py-0.5 rounded-md shadow-2xs">${p.capex}</span>
-                            <span class="text-[10px] font-bold uppercase tracking-wider text-[#113E5D] bg-slate-100 px-2.5 py-0.5 rounded-md border border-slate-200/80">${p.category}</span>
+                            <span class="text-[10px] font-bold uppercase tracking-wider bg-amber-400 text-black px-2.5 py-0.5 rounded-md">${p.category}</span>
                             <span class="text-[11px] text-slate-400 font-medium">${p.liveDate || getDynamicDateLabel(p.daysAgo)}</span>
-                            ${(p.verticals || []).map(v => `<span class="text-[10px] font-semibold bg-white text-slate-600 px-2 py-0.5 rounded border border-slate-200">${v}</span>`).join('')}
+                            ${normalizeStringArray(p.verticals).map(v => `<span class="text-[10px] font-semibold bg-white text-slate-600 px-2 py-0.5 rounded border border-slate-200">${v}</span>`).join('')}
                         </div>
                         <h3 onclick="openItemDetail('project', '${p.id}')" class="text-sm font-bold text-slate-900 group-hover:text-[#113E5D] transition cursor-pointer leading-snug">${p.liveHeadline || p.title}</h3>
                         <p class="text-xs text-slate-600 leading-relaxed line-clamp-2">${p.summary}</p>
+                        <div class="bg-slate-50/90 border border-slate-200/80 rounded-xl p-3 mt-2 space-y-1.5">
+                            <div class="flex flex-wrap items-center gap-1.5">
+                                <span class="text-[10px] font-extrabold uppercase tracking-wider text-slate-500">Assigned Tier-1 Contractors:</span>
+                                ${contractors}
+                            </div>
+                            <div class="text-[11px] text-slate-700 leading-snug">
+                                <strong class="text-[#113E5D]">Target Software Stack &amp; Mandates:</strong> ${p.targetSoftwareStack || 'Mandated Cloud CDE + ISO 19650 BIM coordination'}
+                            </div>
+                            <div class="flex flex-wrap items-center gap-2 pt-0.5">
+                                <span class="text-[10px] font-extrabold uppercase tracking-wider bg-amber-400 text-black px-2.5 py-0.5 rounded-md">GTM Action Trigger: ${p.gtmActionTrigger || 'Enterprise CDE & Prefab Pursuit'}</span>
+                            </div>
+                        </div>
                     </div>
                     <div class="flex items-center lg:flex-col lg:items-end justify-between gap-2 shrink-0 lg:pl-4 pt-2 lg:pt-0 border-t lg:border-t-0 border-slate-100">
                         <a href="${directUrl}" target="_blank" rel="noopener noreferrer" class="text-[11px] font-bold text-[#113E5D] hover:underline flex items-center space-x-1 whitespace-nowrap">
@@ -4111,16 +4385,47 @@
             }).join('');
         }
 
+        function setMarketingPillarFilter(pillarLabel) {
+            currentMarketingPillarFilter = pillarLabel || 'all';
+            renderLiveSignalWire();
+            renderMarketingEnablementSection();
+            lucide.createIcons();
+        }
+
         function renderLiveSignalWire() {
             const container = document.getElementById('liveSignalWireContainer');
             if (!container) return;
             renderVerticalFilterBar('wire-vertical-filters', 'overview');
+
+            const pillarBar = document.getElementById('wire-pillar-filters');
+            if (pillarBar && window.MARKETING_POSITIONING_PILLARS) {
+                const allBtnCls = currentMarketingPillarFilter === 'all'
+                    ? 'bg-amber-400 text-black border-amber-400 font-bold'
+                    : 'bg-slate-50 text-slate-600 border-slate-200 hover:bg-slate-100 font-semibold';
+                const pillarBtns = window.MARKETING_POSITIONING_PILLARS.map(p => {
+                    const isAct = currentMarketingPillarFilter === p.label;
+                    const cls = isAct
+                        ? 'bg-amber-400 text-black border-amber-400 font-bold shadow-2xs'
+                        : 'bg-slate-50 text-slate-600 border-slate-200 hover:bg-slate-100 font-semibold';
+                    return `<button onclick="setMarketingPillarFilter('${p.label.replace(/'/g, "\\'")}')" class="px-2.5 py-1 rounded-lg text-[10px] border transition cursor-pointer ${cls}">${p.label} (${p.shareOfVoice})</button>`;
+                }).join('');
+                pillarBar.innerHTML = `<span class="text-[10px] font-extrabold uppercase tracking-wider text-slate-400 mr-1">Positioning Pillars:</span><button onclick="setMarketingPillarFilter('all')" class="px-2.5 py-1 rounded-lg text-[10px] border transition cursor-pointer ${allBtnCls}">All Pillars</button>${pillarBtns}`;
+            }
+
             const filter = activeVerticalFilters.overview || 'all';
-            const list = liveWireStories.filter(s => matchesVerticalFilter(s.verticals, filter) && matchesRegionFilter(s));
+            const list = liveWireStories.filter(s => {
+                if (!matchesVerticalFilter(s.verticals, filter)) return false;
+                if (!matchesRegionFilter(s)) return false;
+                if (currentMarketingPillarFilter !== 'all') {
+                    return Array.isArray(s.positioningPillars) && s.positioningPillars.includes(currentMarketingPillarFilter);
+                }
+                return true;
+            });
             container.innerHTML = list.map(s => {
                 const directUrl = resolveSpecificArticleUrl(s.liveArticleUrl || s.url, s.liveHeadline || s.title, s.sourceName);
                 const imgUrl = getContextualImage(s, s.sourceName || 'Market Wire');
                 const fallbackImg = `https://placehold.co/400x260/113E5D/ffffff?text=${encodeURIComponent(s.sourceName || 'Market Wire')}`;
+                const pillarTags = (s.positioningPillars || []).map(p => `<span class="text-[10px] font-bold uppercase tracking-wider bg-amber-400 text-black px-2 py-0.5 rounded">${p}</span>`).join('');
                 return `
                 <div class="bg-slate-50/70 border border-slate-200/80 rounded-2xl p-5 hover:border-[#113E5D]/40 transition flex flex-col sm:flex-row gap-5 items-start group">
                     <div onclick="openItemDetail('wire', '${s.id}')" class="w-full sm:w-44 h-32 rounded-xl overflow-hidden shrink-0 relative bg-slate-900 border border-slate-200/80 cursor-pointer">
@@ -4130,7 +4435,10 @@
                     <div class="flex-1 flex flex-col justify-between w-full">
                         <div>
                             <div class="flex flex-wrap items-center justify-between gap-2 mb-1.5">
-                                <span class="text-[10px] font-bold uppercase tracking-wider text-[#113E5D] bg-white px-2.5 py-0.5 rounded-md border border-slate-200">${s.category}</span>
+                                <div class="flex flex-wrap items-center gap-1.5">
+                                    <span class="text-[10px] font-bold uppercase tracking-wider text-[#113E5D] bg-white px-2.5 py-0.5 rounded-md border border-slate-200">${s.category}</span>
+                                    ${pillarTags}
+                                </div>
                                 <span class="text-[11px] text-slate-500 font-medium">${s.liveDate || getDynamicDateLabel(s.daysAgo)}</span>
                             </div>
                             <h3 onclick="openItemDetail('wire', '${s.id}')" class="text-sm sm:text-base font-bold text-slate-900 group-hover:text-[#113E5D] transition cursor-pointer leading-snug">${s.liveHeadline || s.title}</h3>
@@ -4147,6 +4455,55 @@
                     </div>
                 </div>`;
             }).join('');
+        }
+
+        function renderMarketingEnablementSection() {
+            const pContainer = document.getElementById('marketingPositioningContainer');
+            if (pContainer && window.MARKETING_POSITIONING_PILLARS) {
+                pContainer.innerHTML = window.MARKETING_POSITIONING_PILLARS.map(p => {
+                    const isSelected = currentMarketingPillarFilter === p.label;
+                    const cardCls = isSelected
+                        ? 'bg-[#113E5D] text-white border-[#113E5D] shadow-sm'
+                        : 'bg-slate-50/80 hover:border-[#113E5D]/50 text-slate-900 border-slate-200/80';
+                    const subCls = isSelected ? 'text-slate-200' : 'text-slate-600';
+                    return `
+                    <div onclick="setMarketingPillarFilter('${p.label.replace(/'/g, "\\'")}')" class="rounded-2xl p-4 border transition cursor-pointer flex flex-col justify-between space-y-2.5 ${cardCls}">
+                        <div>
+                            <div class="flex items-center justify-between gap-2">
+                                <span class="text-[10px] font-extrabold uppercase tracking-wider bg-amber-400 text-black px-2 py-0.5 rounded">${p.shareOfVoice} SOV</span>
+                                <span class="text-[10px] font-bold ${isSelected ? 'text-amber-300' : 'text-emerald-700'}">${p.momentum}</span>
+                            </div>
+                            <h4 class="text-xs sm:text-sm font-bold mt-2 leading-snug">${p.label}</h4>
+                        </div>
+                        <p class="text-[11px] ${subCls} leading-relaxed">${p.gtmHook}</p>
+                    </div>`;
+                }).join('');
+            }
+
+            const cContainer = document.getElementById('industryCalendarContainer');
+            if (cContainer && window.AEC_INDUSTRY_CALENDAR) {
+                const events = window.AEC_INDUSTRY_CALENDAR.filter(ev => matchesRegionFilter(ev));
+                cContainer.innerHTML = events.map(ev => `
+                    <div class="bg-slate-50/70 border border-slate-200/80 rounded-2xl p-4 flex flex-col justify-between space-y-3 hover:border-[#113E5D]/40 transition">
+                        <div class="space-y-1.5">
+                            <div class="flex items-center justify-between gap-2">
+                                <span class="text-[10px] font-extrabold uppercase tracking-wider bg-amber-400 text-black px-2 py-0.5 rounded">${ev.region} • ${ev.dates}</span>
+                                <span class="text-[10px] font-bold text-[#113E5D] bg-white px-2 py-0.5 rounded border border-slate-200">${ev.cfpStatus}</span>
+                            </div>
+                            <h4 class="text-sm font-bold text-slate-900 leading-snug">${ev.event}</h4>
+                            <p class="text-[11px] font-semibold text-slate-500">${ev.location} • Theme: ${ev.theme}</p>
+                            <p class="text-xs text-slate-600 leading-relaxed pt-1">${ev.gtmPlay}</p>
+                        </div>
+                        <div class="pt-2 border-t border-slate-200/60 flex items-center justify-between text-[11px]">
+                            <span class="text-slate-500 font-medium">Tier-1 Summit Milestone</span>
+                            <a href="${sanitizeSourceUrl(ev.url)}" target="_blank" rel="noopener noreferrer" class="font-bold text-[#113E5D] hover:underline flex items-center space-x-1">
+                                <span>Event Portal</span>
+                                <i data-lucide="external-link" class="w-3 h-3"></i>
+                            </a>
+                        </div>
+                    </div>
+                `).join('');
+            }
         }
 
         function getFormattedStockRateTimestamp(dateObj = new Date()) {
@@ -4293,10 +4650,34 @@
             }).join('');
         }
 
+        function setWorkflowStageFilter(stage) {
+            currentWorkflowStageFilter = stage || 'all';
+            renderSoftwareMatrix();
+            renderDisruptorMatrix();
+            lucide.createIcons();
+        }
+
+        function renderWorkflowFilterBar() {
+            const bar = document.getElementById('soft-workflow-filters');
+            if (!bar || !window.WORKFLOW_TAXONOMY_STAGES) return;
+            const allCls = currentWorkflowStageFilter === 'all'
+                ? 'bg-amber-400 text-black border-amber-400 font-bold'
+                : 'bg-slate-50 text-slate-600 border-slate-200 hover:bg-slate-100 font-semibold';
+            const btns = window.WORKFLOW_TAXONOMY_STAGES.map(st => {
+                const isAct = currentWorkflowStageFilter === st;
+                const cls = isAct
+                    ? 'bg-amber-400 text-black border-amber-400 font-bold shadow-2xs'
+                    : 'bg-slate-50 text-slate-600 border-slate-200 hover:bg-slate-100 font-semibold';
+                return `<button onclick="setWorkflowStageFilter('${st.replace(/'/g, "\\'")}')" class="px-2.5 py-1 rounded-lg text-[10px] border transition cursor-pointer ${cls}">${st}</button>`;
+            }).join('');
+            bar.innerHTML = `<span class="text-[10px] font-extrabold uppercase tracking-wider text-slate-400 mr-1">Workflow Taxonomy:</span><button onclick="setWorkflowStageFilter('all')" class="px-2.5 py-1 rounded-lg text-[10px] border transition cursor-pointer ${allCls}">All Workflows</button>${btns}`;
+        }
+
         function renderMatrixCards(containerId, dataList, matrixType, filterSectionKey) {
             const container = document.getElementById(containerId);
             if (!container) return;
             const isAdvisory = matrixType === 'advisory';
+            const isSoftware = matrixType === 'software';
             const vFilter = isAdvisory ? 'all' : (activeVerticalFilters[filterSectionKey] || 'all');
             const filtered = dataList.map((comp, idx) => {
                 const matchingStories = (comp.stories || [])
@@ -4307,8 +4688,12 @@
                 if (!isAdvisory && !matchesVerticalFilter(comp.verticals, vFilter)) return false;
                 if (!matchesRegionFilter(comp, currentRegionFilter, false)) return false;
                 if (matchingStories.length === 0) return false;
-                if (matrixType === 'software' && currentSoftwareOemFilter !== 'all') {
-                    return comp.relationship === currentSoftwareOemFilter;
+                if (isSoftware && currentSoftwareOemFilter !== 'all') {
+                    if (comp.relationship !== currentSoftwareOemFilter) return false;
+                }
+                if (isSoftware && currentWorkflowStageFilter !== 'all') {
+                    const wf = comp.workflowTaxonomy || [];
+                    if (!wf.includes(currentWorkflowStageFilter)) return false;
                 }
                 return true;
             });
@@ -4317,6 +4702,16 @@
                 const heroImgUrl = getContextualImage(comp, comp.name);
                 const fallbackHero = `https://placehold.co/900x360/113E5D/ffffff?text=${encodeURIComponent(comp.name)}`;
                 const logoUrl = getCompanyFaviconUrl(comp.name);
+                const workflowBadges = isSoftware && Array.isArray(comp.workflowTaxonomy)
+                    ? `<div class="flex flex-wrap items-center gap-1.5 mt-2.5 pt-2.5 border-t border-slate-200/60"><span class="text-[9px] font-extrabold uppercase tracking-wider text-slate-400">Workflows:</span>${comp.workflowTaxonomy.map(w => `<span class="text-[10px] font-bold bg-amber-400/90 text-black px-2 py-0.5 rounded">${w}</span>`).join('')}</div>`
+                    : '';
+
+                const battlecardBtn = !isAdvisory
+                    ? `<button onclick="openBattlecardModal('${comp.name.replace(/'/g, "\\'")}')" class="mt-3 w-full bg-[#113E5D] hover:bg-[#0B293F] text-white text-xs font-bold py-2 px-3.5 rounded-xl transition flex items-center justify-center space-x-2 cursor-pointer shadow-2xs">
+                        <i data-lucide="swords" class="w-3.5 h-3.5 text-amber-400"></i>
+                        <span>Sales Battlecard &amp; Objection Engine</span>
+                       </button>`
+                    : '';
 
                 const storiesHtml = matchingStories.slice(0, 3).map(({ st, sIdx }, displayIdx) => {
                     const directUrl = resolveSpecificArticleUrl(st.liveArticleUrl || st.url, st.liveTitle || st.title, st.sourceName || comp.name);
@@ -4353,7 +4748,9 @@
                         </div>
                         <div class="p-6 sm:p-7 pb-4">
                             ${isAdvisory ? '' : renderCardTagBar(comp.verticals)}
+                            ${workflowBadges}
                             <p class="text-xs sm:text-sm text-slate-600 ${isAdvisory ? '' : 'mt-3'} leading-relaxed">${comp.summary}</p>
+                            ${battlecardBtn}
                         </div>
                     </div>
                     <div class="px-6 sm:px-7 pb-6 sm:pb-7 space-y-3.5">
@@ -4363,9 +4760,162 @@
             }).join('');
         }
 
+        function filterDisruptorCategory(category) {
+            currentDisruptorCategoryFilter = category || 'all';
+            document.querySelectorAll('#disruptor-category-filters button').forEach(btn => {
+                const isAct = btn.getAttribute('data-cat') === currentDisruptorCategoryFilter;
+                btn.className = isAct
+                    ? 'px-3 py-1.5 rounded-lg text-[11px] font-semibold bg-[#113E5D] text-white cursor-pointer transition'
+                    : 'px-3 py-1.5 rounded-lg text-[11px] font-semibold bg-slate-100 text-slate-600 hover:bg-slate-200 cursor-pointer transition';
+            });
+            renderDisruptorMatrix();
+            lucide.createIcons();
+        }
+
+        function renderDisruptorMatrix() {
+            const container = document.getElementById('disruptorMatrixContainer');
+            if (!container || !window.disruptorMatrixData) return;
+            const vFilter = activeVerticalFilters.soft || 'all';
+            const list = window.disruptorMatrixData.filter(d => {
+                if (currentDisruptorCategoryFilter !== 'all' && d.category !== currentDisruptorCategoryFilter) return false;
+                if (!matchesVerticalFilter(d.verticals, vFilter)) return false;
+                if (!matchesRegionFilter(d, currentRegionFilter, false)) return false;
+                if (currentWorkflowStageFilter !== 'all') {
+                    if (!(d.workflowTaxonomy || []).includes(currentWorkflowStageFilter)) return false;
+                }
+                return true;
+            });
+
+            container.innerHTML = list.map(d => {
+                const relBadge = d.relationship === 'partner'
+                    ? 'bg-emerald-50 text-emerald-800 border-emerald-200'
+                    : 'bg-slate-100 text-slate-700 border-slate-200';
+                const wfHtml = (d.workflowTaxonomy || []).map(w => `<span class="text-[10px] font-bold bg-amber-400 text-black px-2 py-0.5 rounded">${w}</span>`).join('');
+                return `
+                <div class="bg-slate-50/80 border border-slate-200/80 rounded-2xl p-5 flex flex-col justify-between space-y-4 hover:border-[#113E5D]/50 transition shadow-2xs">
+                    <div class="space-y-2.5">
+                        <div class="flex items-center justify-between gap-2">
+                            <span class="text-[10px] font-extrabold uppercase tracking-wider bg-amber-400 text-black px-2.5 py-0.5 rounded">${d.category}</span>
+                            <span class="text-[10px] font-bold px-2 py-0.5 rounded border ${relBadge}">${d.segment}</span>
+                        </div>
+                        <div>
+                            <h4 class="text-base font-bold text-slate-900">${d.name}</h4>
+                            <p class="text-[11px] font-semibold text-[#113E5D]">${d.badge}</p>
+                        </div>
+                        <div class="flex flex-wrap gap-1.5 pt-1">${wfHtml}</div>
+                        <p class="text-xs text-slate-600 leading-relaxed">${d.summary}</p>
+                    </div>
+                    <div class="pt-3 border-t border-slate-200/70 flex items-center justify-between gap-2">
+                        <button onclick="openBattlecardModal('${d.name.replace(/'/g, "\\'")}')" class="flex-1 bg-[#113E5D] hover:bg-[#0B293F] text-white text-[11px] font-bold py-2 px-3 rounded-xl transition flex items-center justify-center space-x-1.5 cursor-pointer">
+                            <i data-lucide="swords" class="w-3.5 h-3.5 text-amber-400"></i>
+                            <span>Open GTM Battlecard</span>
+                        </button>
+                        <a href="${sanitizeSourceUrl(d.url)}" target="_blank" rel="noopener noreferrer" class="p-2 rounded-xl bg-white border border-slate-200 text-[#113E5D] hover:bg-slate-100 transition" title="Vendor Site">
+                            <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                        </a>
+                    </div>
+                </div>`;
+            }).join('');
+        }
+
+        function renderInteroperabilityRadar() {
+            const container = document.getElementById('interoperabilityRadarContainer');
+            if (!container || !window.INTEROPERABILITY_OPENBIM_RADAR) return;
+            container.innerHTML = window.INTEROPERABILITY_OPENBIM_RADAR.map(row => `
+                <tr class="hover:bg-slate-50/90 transition">
+                    <td class="py-3.5 px-4 font-bold text-slate-900">${row.vendor}</td>
+                    <td class="py-3.5 px-4 text-slate-700">${row.apiDocs}</td>
+                    <td class="py-3.5 px-4 text-slate-700">${row.webhooks}</td>
+                    <td class="py-3.5 px-4 text-slate-700">${row.marketplace}</td>
+                    <td class="py-3.5 px-4"><span class="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-50 text-emerald-800 border border-emerald-200">${row.ifcSupport}</span></td>
+                    <td class="py-3.5 px-4 text-slate-700 font-medium">${row.bcfSupport}</td>
+                    <td class="py-3.5 px-4"><span class="px-2 py-0.5 rounded text-[10px] font-bold bg-slate-100 text-[#113E5D] border border-slate-200">${row.iso19650}</span></td>
+                    <td class="py-3.5 px-4 text-slate-600">${row.cmmcFedRamp}</td>
+                    <td class="py-3.5 px-4 text-right">
+                        <button onclick="openBattlecardModal('${row.vendor.split(' (')[0].replace(/'/g, "\\'")}')" class="px-2.5 py-1 rounded-lg bg-amber-400 hover:bg-amber-300 text-black font-bold text-[10px] transition cursor-pointer whitespace-nowrap">
+                            Battlecard →
+                        </button>
+                    </td>
+                </tr>
+            `).join('');
+        }
+
+        function getBattlecardForVendor(vendorName) {
+            const map = window.VENDOR_BATTLECARDS || {};
+            if (map[vendorName]) return map[vendorName];
+            const key = Object.keys(map).find(k => vendorName.toLowerCase().includes(k.toLowerCase()) || k.toLowerCase().includes(vendorName.toLowerCase()));
+            if (key) return map[key];
+            return {
+                licensingModel: 'Enterprise Subscription / Named User & Project Tiering (Annual or Multi-Year Contract)',
+                whyUs: [
+                    'ARKANCE delivers multi-vendor lifecycle integration across Autodesk Construction Cloud, Bluebeam, Esri, and ERP systems—eliminating isolated point-solution silos.',
+                    'Be.Smart proprietary engineering plugins and ISO 19650 implementation services accelerate deployment ROI across USA, EMEA, and APAC project teams.'
+                ],
+                landmines: [
+                    'Ask the buyer: "How does this tool exchange live model parameters and ISO 19650 metadata with your primary authoring and estimating stack without manual CSV exports?"',
+                    'Ask the buyer: "What happens to your total cost of ownership when external subcontractors and specialty trades require read/write access during peak construction?"',
+                    'Ask the buyer: "Who owns the last-mile custom API integration and local regional standards templates once the software vendor’s standard onboarding ends?"'
+                ]
+            };
+        }
+
+        function openBattlecardModal(vendorName) {
+            const modal = document.getElementById('battlecardModal');
+            if (!modal) return;
+            activeBattlecardVendor = vendorName;
+            const bc = getBattlecardForVendor(vendorName);
+            const wf = (window.VENDOR_WORKFLOW_TAXONOMY_MAP && window.VENDOR_WORKFLOW_TAXONOMY_MAP[vendorName])
+                || ((window.disruptorMatrixData || []).find(d => d.name === vendorName) || {}).workflowTaxonomy
+                || ['Design/Authoring', 'Common Data Environment (ISO 19650)', 'Field Execution'];
+
+            document.getElementById('bcModalVendorTitle').textContent = `${vendorName} — GTM Sales Battlecard & Objection Engine`;
+            document.getElementById('bcModalLicensing').textContent = bc.licensingModel;
+            document.getElementById('bcModalWorkflowTags').innerHTML = wf.map(w => `<span class="text-[10px] font-bold uppercase tracking-wider bg-amber-400 text-black px-2.5 py-0.5 rounded">${w}</span>`).join('');
+            document.getElementById('bcModalWhyUsList').innerHTML = (bc.whyUs || []).map(item => `<li class="flex items-start space-x-2"><span class="text-emerald-700 font-extrabold">✓</span><span>${item}</span></li>`).join('');
+            document.getElementById('bcModalLandminesList').innerHTML = (bc.landmines || []).map(q => `<li class="pl-1">${q}</li>`).join('');
+
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            modal.style.display = 'flex';
+            lucide.createIcons();
+        }
+
+        function closeBattlecardModal() {
+            const modal = document.getElementById('battlecardModal');
+            if (!modal) return;
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            modal.style.display = 'none';
+        }
+
+        function copyBattlecardToClipboard() {
+            if (!activeBattlecardVendor) return;
+            const bc = getBattlecardForVendor(activeBattlecardVendor);
+            const text = [
+                `ARKANCE GTM BATTLECARD: ${activeBattlecardVendor}`,
+                `Licensing Model: ${bc.licensingModel}`,
+                `\nWHY ARKANCE ECOSYSTEM:`,
+                ...(bc.whyUs || []).map(w => `- ${w}`),
+                `\n3 LANDMINE DISCOVERY QUESTIONS:`,
+                ...(bc.landmines || []).map((q, i) => `${i + 1}. ${q}`)
+            ].join('\n');
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(text);
+            }
+            const btn = document.getElementById('bcCopyBtn');
+            if (btn) {
+                const orig = btn.innerHTML;
+                btn.innerHTML = `<span>✓ Copied Battlecard to Clipboard</span>`;
+                setTimeout(() => { btn.innerHTML = orig; lucide.createIcons(); }, 2000);
+            }
+        }
+
         function renderSoftwareMatrix() {
             renderVerticalFilterBar('soft-vertical-filters', 'soft');
+            renderWorkflowFilterBar();
             renderMatrixCards('softwareMatrixContainer', softwareOemData, 'software', 'soft');
+            renderDisruptorMatrix();
+            renderInteroperabilityRadar();
         }
 
         function renderChannelMatrix() {
@@ -4401,6 +4951,7 @@
             renderMajorProjects();
             renderMacroPulse();
             renderLiveSignalWire();
+            renderMarketingEnablementSection();
             renderStockTracker();
             renderArkanceNews();
             renderRegulatory();
@@ -4414,6 +4965,29 @@
         // ==========================================
         // 5. COMPACT OBJECTIVE AI MARKET ANALYTICS ENGINE
         // ==========================================
+        const ACTIVE_PROJECTS_30D_BY_VERTICAL = {
+            labels: [
+                'Civil & Transport',
+                'Energy & Grid',
+                'Commercial & Inst',
+                'Data Centers & Mfg',
+                'Healthcare & Life Sci'
+            ],
+            counts: [4420, 3380, 2890, 1940, 1620],
+            colors: ['#113E5D', '#F59E0B', '#0284C7', '#10B981', '#6366F1']
+        };
+
+        function computeActiveProjects30DayMetric() {
+            const total = ACTIVE_PROJECTS_30D_BY_VERTICAL.counts.reduce((acc, n) => acc + n, 0);
+            return {
+                labels: ACTIVE_PROJECTS_30D_BY_VERTICAL.labels,
+                counts: ACTIVE_PROJECTS_30D_BY_VERTICAL.counts,
+                colors: ACTIVE_PROJECTS_30D_BY_VERTICAL.colors,
+                total: total
+            };
+        }
+        const computeActiveProjects30dMetric = computeActiveProjects30DayMetric;
+
         function computePublicConTechMetric() {
             const publicStocks = stockTrackerData.filter(s => !s.ticker.startsWith('PRIVATE'));
             const changes = publicStocks.map(s => {
@@ -4436,26 +5010,51 @@
             const narrativeEl = document.getElementById('geminiExecutiveNarrative');
             if (!narrativeEl) return;
 
-            const conTechMetric = computePublicConTechMetric();
-            const sign = conTechMetric.avgDailyChange >= 0 ? '+' : '';
-
             narrativeEl.innerHTML = `
-                <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2.5 text-xs sm:text-sm text-slate-100 leading-relaxed">
-                    <li class="flex items-start space-x-2">
-                        <span class="text-amber-400 font-bold mt-0.5">•</span>
-                        <span><strong>30-Day CapEx Velocity:</strong> Global awards surged in hyperscale AI &amp; fabs (<strong>+28.0% YoY</strong> across USA, EMEA FLAP-D &amp; Japan), HVDC grid upgrades (<strong>+22.0%</strong>), and public rail/water lettings (<strong>+16.0%</strong>).</span>
+                <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 text-xs sm:text-sm text-slate-100 leading-relaxed">
+                    <li class="space-y-1.5">
+                        <div class="flex items-start space-x-2">
+                            <span class="text-amber-400 font-bold mt-0.5">•</span>
+                            <strong class="text-white">30-Day CapEx Growth</strong>
+                        </div>
+                        <ul class="pl-5 space-y-1 text-xs text-slate-200 list-disc">
+                            <li>Hyperscale AI and chip fabs up 28% YoY</li>
+                            <li>High-voltage grid upgrades up 22% YoY</li>
+                            <li>Public rail and water projects up 16% YoY</li>
+                        </ul>
                     </li>
-                    <li class="flex items-start space-x-2">
-                        <span class="text-amber-400 font-bold mt-0.5">•</span>
-                        <span><strong>Leading Design Pipelines:</strong> 9-to-18-month expansion holds across the <strong>USA</strong> (50.8 AIA ABI; +14.2% Dodge DMI), <strong>EMEA</strong> (+14% RICS; +15.4% Euroconstruct civil), and <strong>APAC</strong> (A$120B ANZ &amp; Japan MLIT).</span>
+                    <li class="space-y-1.5">
+                        <div class="flex items-start space-x-2">
+                            <span class="text-amber-400 font-bold mt-0.5">•</span>
+                            <strong class="text-white">Design Pipelines (9–18 Months)</strong>
+                        </div>
+                        <ul class="pl-5 space-y-1 text-xs text-slate-200 list-disc">
+                            <li>USA: 50.8 AIA Billings Index and +14.2% Dodge Momentum</li>
+                            <li>EMEA: +14% RICS workload and +15.4% civil growth</li>
+                            <li>APAC: A$120B ANZ pipeline and Japan MLIT digital delivery</li>
+                        </ul>
                     </li>
-                    <li class="flex items-start space-x-2">
-                        <span class="text-amber-400 font-bold mt-0.5">•</span>
-                        <span><strong>Backlogs &amp; Bottlenecks:</strong> Tier-1 backlogs remain strong (<strong>8.9 mos USA</strong>; <strong>9.2 mos EU</strong>), while <strong>85–110 wk switchgear queues</strong> and skilled labor gaps (<strong>439K+ US; 300K+ EU</strong>) accelerate off-site DfMA.</span>
+                    <li class="space-y-1.5">
+                        <div class="flex items-start space-x-2">
+                            <span class="text-amber-400 font-bold mt-0.5">•</span>
+                            <strong class="text-white">Backlogs &amp; Supply Bottlenecks</strong>
+                        </div>
+                        <ul class="pl-5 space-y-1 text-xs text-slate-200 list-disc">
+                            <li>Tier-1 contractor backlogs at 8.9 months (USA) and 9.2 months (EU)</li>
+                            <li>High-voltage switchgear lead times at 85 to 110 weeks</li>
+                            <li>Skilled labor shortages driving 40% off-site prefabrication</li>
+                        </ul>
                     </li>
-                    <li class="flex items-start space-x-2">
-                        <span class="text-amber-400 font-bold mt-0.5">•</span>
-                        <span><strong>ConTech &amp; CDE Adoption:</strong> Public ConTech equities rose <strong>+${conTechMetric.yoyGrowth}% YoY (${sign}${conTechMetric.avgDailyChange.toFixed(2)}% session)</strong> as US FHWA/CMMC, UK/EU ISO 19650, and APAC mandates push Cloud CDE adoption to <strong>86%</strong>.</span>
+                    <li class="space-y-1.5">
+                        <div class="flex items-start space-x-2">
+                            <span class="text-amber-400 font-bold mt-0.5">•</span>
+                            <strong class="text-white">Global Digital &amp; Cloud Adoption</strong>
+                        </div>
+                        <ul class="pl-5 space-y-1 text-xs text-slate-200 list-disc">
+                            <li>Enterprise Cloud CDE adoption at 86% worldwide</li>
+                            <li>USA federal FHWA BIM and DoD CMMC 2.0 compliance</li>
+                            <li>UK/EU ISO 19650 and Singapore CORENET X mandates</li>
+                        </ul>
                     </li>
                 </ul>
             `;
@@ -4471,7 +5070,7 @@
             }
             const cfg = AI_VERTICAL_GROWTH_SERIES[currentAiVerticalSelection] || AI_VERTICAL_GROWTH_SERIES['all'];
             const captionEl = document.getElementById('aiVerticalChartCaption');
-            if (captionEl) captionEl.textContent = cfg.caption;
+            if (captionEl) captionEl.textContent = String(cfg.caption || '').replace(/^Showing:\s*/i, '').replace(/,/g, ' •');
 
             if (chartInstances.aiVerticalChart) {
                 chartInstances.aiVerticalChart.data.datasets[0].label = cfg.label;
@@ -4483,18 +5082,348 @@
         }
 
         function updateAiAnalyticsCharts() {
-            const conTech = computePublicConTechMetric();
-            const badgeEl = document.getElementById('aiConTechCompositeBadge');
+            const activeProjects = computeActiveProjects30DayMetric();
+            const badgeEl = document.getElementById('aiActiveProjectsTotalBadge');
             if (badgeEl) {
-                const sign = conTech.avgDailyChange >= 0 ? '+' : '';
-                badgeEl.textContent = `+${conTech.yoyGrowth}% YoY (${sign}${conTech.avgDailyChange.toFixed(2)}% Avg Day)`;
+                badgeEl.textContent = `~${activeProjects.total.toLocaleString('en-US')} Active Projects`;
             }
             if (chartInstances.aiConTechChart) {
-                chartInstances.aiConTechChart.data.datasets[0].data = conTech.series;
-                chartInstances.aiConTechChart.data.datasets[1].data = conTech.arrSeries;
+                chartInstances.aiConTechChart.data.labels = activeProjects.labels;
+                chartInstances.aiConTechChart.data.datasets[0].data = activeProjects.counts;
                 chartInstances.aiConTechChart.update();
             }
             updateAiConstructionVerticalChart(currentAiVerticalSelection);
+        }
+
+        // ==========================================
+        // 5B. ONCE-A-DAY SINGLE-VOICE BBC CADENCE AUDIO BRIEFING ENGINE
+        // ==========================================
+        const DEFAULT_DAILY_PODCAST_SCRIPT = [
+            "Global construction activity is expanding at sixteen point two percent year on year, led by hyperscale data centres and semiconductor fabrication plants at twenty-eight percent, alongside high-voltage grid corridors at twenty-two percent.",
+            "Over the past thirty days, more than fourteen thousand two hundred major projects remained active worldwide, anchored by civil transport and utility transmission.",
+            "Forward design pipelines remain firm across all three regions for the next eighteen months, supported by positive architectural billings in the United States, rising civil engineering workloads across Europe, and a one hundred and twenty billion dollar infrastructure programme across Australia and New Zealand.",
+            "On the ground, tier-one contractor backlogs now stand near nine months, while two-year lead times for high-voltage switchgear and persistent skilled labour shortages are shifting forty percent of mechanical and electrical assemblies into off-site prefabrication.",
+            "Consequently, enterprise cloud common data environment adoption has reached eighty-six percent worldwide, driven by mandatory digital delivery and cybersecurity standards across North America, Europe, and Asia-Pacific."
+        ].join(' ');
+
+        const DEFAULT_DAILY_PODCAST_TURNS = [
+            {
+                speaker: 'Anchor',
+                text: DEFAULT_DAILY_PODCAST_SCRIPT
+            }
+        ];
+
+        let radioBriefState = {
+            isPlaying: false,
+            isLoading: false,
+            speedIndex: 0,
+            speeds: [1, 1.25, 1.5],
+            loadedDateKey: '',
+            audioBlobUrl: null,
+            usingWebSpeechFallback: false,
+            webSpeechTimer: null,
+            webSpeechElapsed: 0
+        };
+
+        function getTodayPodcastDateKey() {
+            return new Date().toISOString().slice(0, 10);
+        }
+
+        function formatRadioTime(sec) {
+            if (!isFinite(sec) || sec < 0) sec = 0;
+            const m = Math.floor(sec / 60);
+            const s = Math.floor(sec % 60);
+            return `${m}:${s < 10 ? '0' : ''}${s}`;
+        }
+
+        function setRadioPlayButtonIcon(mode) {
+            const btn = document.getElementById('radioBriefPlayBtn');
+            if (!btn) return;
+            if (mode === 'loading') {
+                btn.innerHTML = `<i data-lucide="loader-2" class="w-4 h-4 animate-spin"></i>`;
+            } else if (mode === 'pause') {
+                btn.innerHTML = `<i data-lucide="pause" class="w-4 h-4 fill-current"></i>`;
+            } else {
+                btn.innerHTML = `<i data-lucide="play" class="w-4 h-4 fill-current ml-0.5"></i>`;
+            }
+            lucide.createIcons();
+        }
+
+        function buildCurrentOverviewSummaryText() {
+            const projects = majorProjectsData
+                .slice(0, 4)
+                .map(p => `${p.capex} ${p.liveHeadline || p.title}`)
+                .join('; ');
+            const macros = macroPulseData
+                .slice(0, 3)
+                .map(m => `${m.badge} (${m.metricValue}): ${m.liveHeadline || m.title}`)
+                .join('; ');
+            const activeProjects = computeActiveProjects30DayMetric();
+            return `Top Projects: ${projects}. Macro Indicators: ${macros}. Active Projects Worldwide (Last 30 Days): ~${activeProjects.total}, Cloud CDE Adoption: 86%.`;
+        }
+
+        function syncRadioBriefingScopeUI() {
+            // Once-a-day podcast audio bite remains unified across the day
+        }
+
+        function initRadioAudioListeners() {
+            const audioEl = document.getElementById('dailyRadioAudioEl');
+            if (!audioEl || audioEl.dataset.bound === '1') return;
+            audioEl.dataset.bound = '1';
+
+            audioEl.addEventListener('loadedmetadata', () => {
+                const dur = audioEl.duration || 60;
+                const timeEl = document.getElementById('radioBriefTimeDisplay');
+                if (timeEl) {
+                    timeEl.textContent = `${formatRadioTime(audioEl.currentTime)} / ${formatRadioTime(dur)}`;
+                }
+            });
+
+            audioEl.addEventListener('timeupdate', () => {
+                const dur = audioEl.duration || 60;
+                const pct = dur > 0 ? (audioEl.currentTime / dur) * 100 : 0;
+                const scrubber = document.getElementById('radioBriefScrubber');
+                const timeEl = document.getElementById('radioBriefTimeDisplay');
+                if (scrubber) scrubber.value = String(Math.min(100, pct));
+                if (timeEl) {
+                    timeEl.textContent = `${formatRadioTime(audioEl.currentTime)} / ${formatRadioTime(dur)}`;
+                }
+            });
+
+            audioEl.addEventListener('play', () => {
+                radioBriefState.isPlaying = true;
+                setRadioPlayButtonIcon('pause');
+            });
+
+            audioEl.addEventListener('pause', () => {
+                if (!audioEl.ended) {
+                    radioBriefState.isPlaying = false;
+                    setRadioPlayButtonIcon('play');
+                }
+            });
+
+            audioEl.addEventListener('ended', () => {
+                radioBriefState.isPlaying = false;
+                setRadioPlayButtonIcon('play');
+                const scrubber = document.getElementById('radioBriefScrubber');
+                const timeEl = document.getElementById('radioBriefTimeDisplay');
+                const dur = audioEl.duration || 60;
+                if (scrubber) scrubber.value = '0';
+                if (timeEl) timeEl.textContent = `0:00 / ${formatRadioTime(dur)}`;
+            });
+        }
+
+        function stopWebSpeechFallback() {
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+            }
+            if (radioBriefState.webSpeechTimer) {
+                clearInterval(radioBriefState.webSpeechTimer);
+                radioBriefState.webSpeechTimer = null;
+            }
+            radioBriefState.usingWebSpeechFallback = false;
+            radioBriefState.isPlaying = false;
+        }
+
+        function startWebSpeechFallback(turnsInput) {
+            stopWebSpeechFallback();
+            if (!('speechSynthesis' in window)) return;
+
+            const turns = Array.isArray(turnsInput) && turnsInput.length > 0
+                ? turnsInput
+                : (window.latestDailyBriefingTurns || DEFAULT_DAILY_PODCAST_TURNS);
+
+            const fullBbcScript = (window.latestDailyBriefingCustomScript || turns.map(t => String(t.text || '')).join(' '))
+                .replace(/^(Anchor|Alex|Maya|Host|Narrator)\s*:\s*/gi, '')
+                .replace(/<breath>|<laugh>|<gasp>/gi, '')
+                .replace(/\|yeah\||\|mhm\|/gi, '')
+                .replace(/\s+/g, ' ')
+                .trim();
+
+            const voices = window.speechSynthesis.getVoices() || [];
+            const gbVoices = voices.filter(v => /^en[-_]GB/i.test(v.lang));
+            const englishVoices = voices.filter(v => /^en(-|_)/i.test(v.lang));
+            const bbcAnchorVoice =
+                gbVoices.find(v => /daniel|arthur|oliver|ryan|george|google uk english male|libby|sonia/i.test(v.name)) ||
+                gbVoices[0] ||
+                englishVoices.find(v => /daniel|arthur|guy|brian|christopher/i.test(v.name)) ||
+                englishVoices[0] ||
+                null;
+
+            const baseRate = radioBriefState.speeds[radioBriefState.speedIndex] || 1.0;
+            radioBriefState.usingWebSpeechFallback = true;
+            radioBriefState.isPlaying = true;
+            radioBriefState.webSpeechElapsed = 0;
+            setRadioPlayButtonIcon('pause');
+
+            radioBriefState.webSpeechTimer = setInterval(() => {
+                radioBriefState.webSpeechElapsed += 0.25 * baseRate;
+                const pct = Math.min(100, (radioBriefState.webSpeechElapsed / 60) * 100);
+                const scrubber = document.getElementById('radioBriefScrubber');
+                const timeEl = document.getElementById('radioBriefTimeDisplay');
+                if (scrubber) scrubber.value = String(pct);
+                if (timeEl) timeEl.textContent = `${formatRadioTime(radioBriefState.webSpeechElapsed)} / 1:00`;
+            }, 250);
+
+            const utter = new SpeechSynthesisUtterance(fullBbcScript);
+            if (bbcAnchorVoice) {
+                utter.voice = bbcAnchorVoice;
+                utter.lang = bbcAnchorVoice.lang || 'en-GB';
+            } else {
+                utter.lang = 'en-GB';
+            }
+            utter.pitch = 0.98;
+            utter.rate = baseRate;
+            utter.onend = () => {
+                stopWebSpeechFallback();
+                setRadioPlayButtonIcon('play');
+                const scrubber = document.getElementById('radioBriefScrubber');
+                const timeEl = document.getElementById('radioBriefTimeDisplay');
+                if (scrubber) scrubber.value = '0';
+                if (timeEl) timeEl.textContent = '0:00 / 1:00';
+            };
+            window.speechSynthesis.speak(utter);
+        }
+
+        async function generateDailyRadioBriefing(_forceRefresh = false, autoPlay = false) {
+            initRadioAudioListeners();
+            if (radioBriefState.isLoading) return;
+
+            const audioEl = document.getElementById('dailyRadioAudioEl');
+            const todayKey = getTodayPodcastDateKey();
+
+            stopWebSpeechFallback();
+            if (audioEl && !audioEl.paused) {
+                audioEl.pause();
+            }
+
+            if (autoPlay) {
+                setRadioPlayButtonIcon('loading');
+            }
+            radioBriefState.isLoading = true;
+
+            try {
+                const res = await fetch('/api/daily-briefing', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        overviewSummary: buildCurrentOverviewSummaryText()
+                    })
+                });
+
+                if (res.ok) {
+                    const data = await res.json();
+                    if (data.script) {
+                        window.latestDailyBriefingCustomScript = data.script;
+                    }
+                    if (Array.isArray(data.turns) && data.turns.length > 0) {
+                        window.latestDailyBriefingTurns = data.turns;
+                    }
+                    if (data.audioBase64) {
+                        window.latestDailyBriefingWavBase64 = data.audioBase64;
+                        const byteChars = atob(data.audioBase64);
+                        const byteNumbers = new Uint8Array(byteChars.length);
+                        for (let i = 0; i < byteChars.length; i++) {
+                            byteNumbers[i] = byteChars.charCodeAt(i);
+                        }
+                        const audioBlob = new Blob([byteNumbers], { type: data.mimeType || 'audio/mpeg' });
+                        if (radioBriefState.audioBlobUrl) {
+                            URL.revokeObjectURL(radioBriefState.audioBlobUrl);
+                        }
+                        radioBriefState.audioBlobUrl = URL.createObjectURL(audioBlob);
+                        radioBriefState.loadedDateKey = data.dateKey || todayKey;
+                        if (audioEl) {
+                            audioEl.src = radioBriefState.audioBlobUrl;
+                            audioEl.playbackRate = radioBriefState.speeds[radioBriefState.speedIndex] || 1;
+                            audioEl.load();
+                            if (autoPlay) {
+                                try {
+                                    await audioEl.play();
+                                } catch (_playErr) {
+                                    startWebSpeechFallback(window.latestDailyBriefingTurns || DEFAULT_DAILY_PODCAST_TURNS);
+                                }
+                            } else {
+                                setRadioPlayButtonIcon('play');
+                            }
+                        }
+                        radioBriefState.isLoading = false;
+                        return;
+                    }
+                }
+            } catch (e) {}
+
+            // Fallback 1: Pre-committed static assets/daily-briefing.wav (only if server returns an actual audio Content-Type)
+            try {
+                const staticRes = await fetch('assets/daily-briefing.wav', { method: 'HEAD' });
+                const contentType = (staticRes.headers.get('content-type') || '').toLowerCase();
+                if (staticRes.ok && contentType.startsWith('audio/') && audioEl) {
+                    audioEl.src = 'assets/daily-briefing.wav';
+                    audioEl.playbackRate = radioBriefState.speeds[radioBriefState.speedIndex] || 1;
+                    radioBriefState.loadedDateKey = todayKey;
+                    if (autoPlay) {
+                        try {
+                            await audioEl.play();
+                        } catch (_playErr) {
+                            startWebSpeechFallback(window.latestDailyBriefingTurns || DEFAULT_DAILY_PODCAST_TURNS);
+                        }
+                    } else {
+                        setRadioPlayButtonIcon('play');
+                    }
+                    radioBriefState.isLoading = false;
+                    return;
+                }
+            } catch (e) {}
+
+            // Fallback 2: Two-host browser speech synthesis if offline or static host without audio file
+            radioBriefState.isLoading = false;
+            if (autoPlay) {
+                startWebSpeechFallback(window.latestDailyBriefingTurns || DEFAULT_DAILY_PODCAST_TURNS);
+            } else {
+                setRadioPlayButtonIcon('play');
+            }
+        }
+
+        async function toggleDailyRadioBriefingPlay() {
+            initRadioAudioListeners();
+            const audioEl = document.getElementById('dailyRadioAudioEl');
+            const todayKey = getTodayPodcastDateKey();
+
+            if (radioBriefState.usingWebSpeechFallback) {
+                stopWebSpeechFallback();
+                setRadioPlayButtonIcon('play');
+                return;
+            }
+
+            if (audioEl && audioEl.src && radioBriefState.loadedDateKey === todayKey) {
+                if (audioEl.paused) {
+                    try {
+                        await audioEl.play();
+                    } catch (_playErr) {
+                        startWebSpeechFallback(window.latestDailyBriefingTurns || DEFAULT_DAILY_PODCAST_TURNS);
+                    }
+                } else {
+                    audioEl.pause();
+                }
+                return;
+            }
+
+            await generateDailyRadioBriefing(false, true);
+        }
+
+        function seekRadioBriefAudio(val) {
+            const audioEl = document.getElementById('dailyRadioAudioEl');
+            if (audioEl && audioEl.duration) {
+                audioEl.currentTime = (Number(val) / 100) * audioEl.duration;
+            }
+        }
+
+        function cycleRadioBriefSpeed() {
+            radioBriefState.speedIndex = (radioBriefState.speedIndex + 1) % radioBriefState.speeds.length;
+            const nextSpeed = radioBriefState.speeds[radioBriefState.speedIndex];
+            const btn = document.getElementById('radioBriefSpeedBtn');
+            if (btn) btn.textContent = `${nextSpeed}x`;
+            const audioEl = document.getElementById('dailyRadioAudioEl');
+            if (audioEl) audioEl.playbackRate = nextSpeed;
         }
 
         // ==========================================
@@ -4774,31 +5703,17 @@
             const aiConTechCtx = document.getElementById('aiConTechEquityChart');
             if (aiConTechCtx) {
                 if (chartInstances.aiConTechChart) chartInstances.aiConTechChart.destroy();
-                const metric = computePublicConTechMetric();
+                const activeProjects = computeActiveProjects30dMetric();
                 chartInstances.aiConTechChart = new Chart(aiConTechCtx.getContext('2d'), {
-                    type: 'line',
+                    type: 'bar',
                     data: {
-                        labels: ['Q1 25', 'Q2 25', 'Q3 25', 'Q4 25', 'Q1 26', 'Current'],
+                        labels: activeProjects.labels,
                         datasets: [
                             {
-                                label: 'Public ConTech Equity Index (Base 100)',
-                                data: metric.series,
-                                borderColor: '#113E5D',
-                                backgroundColor: 'rgba(17, 62, 93, 0.12)',
-                                borderWidth: 2.5,
-                                fill: true,
-                                tension: 0.35,
-                                pointRadius: 3.5
-                            },
-                            {
-                                label: 'Weighted Cloud ARR Index (Base 100)',
-                                data: metric.arrSeries,
-                                borderColor: '#F59E0B',
-                                borderDash: [4, 4],
-                                borderWidth: 2,
-                                fill: false,
-                                tension: 0.35,
-                                pointRadius: 2.5
+                                label: 'Estimated Active Projects Worldwide (Last 30 Days)',
+                                data: activeProjects.counts,
+                                backgroundColor: activeProjects.colors,
+                                borderRadius: 6
                             }
                         ]
                     },
@@ -4806,15 +5721,15 @@
                         responsive: true,
                         maintainAspectRatio: false,
                         plugins: {
-                            legend: { position: 'bottom', labels: { boxWidth: 10, font: { size: 10 } } }
+                            legend: { display: false }
                         },
                         scales: {
                             y: {
-                                min: 95,
-                                max: 130,
+                                beginAtZero: true,
+                                max: 5000,
                                 ticks: { font: { size: 10 } }
                             },
-                            x: { ticks: { font: { size: 10 } } }
+                            x: { ticks: { font: { size: 9 } } }
                         }
                     }
                 });
@@ -5340,6 +6255,36 @@
                 });
 
                 if (putRes.ok) {
+                    // Also commit assets/daily-briefing.wav if generated in memory so static GitHub Pages can play it directly
+                    if (window.latestDailyBriefingWavBase64) {
+                        try {
+                            const wavPath = "assets/daily-briefing.wav";
+                            const wavApiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${wavPath}`;
+                            let wavSha = null;
+                            const wavGetRes = await fetch(`${wavApiUrl}?ref=${branch}`, {
+                                headers: { "Authorization": `Bearer ${token}`, "Accept": "application/vnd.github+json" }
+                            });
+                            if (wavGetRes.ok) {
+                                const existingWav = await wavGetRes.json();
+                                wavSha = existingWav.sha;
+                            }
+                            const wavPutBody = {
+                                message: `Update Daily AI Radio Briefing Audio (${APP_VERSION} Beta)`,
+                                content: window.latestDailyBriefingWavBase64,
+                                branch: branch
+                            };
+                            if (wavSha) wavPutBody.sha = wavSha;
+                            await fetch(wavApiUrl, {
+                                method: "PUT",
+                                headers: {
+                                    "Authorization": `Bearer ${token}`,
+                                    "Accept": "application/vnd.github+json",
+                                    "Content-Type": "application/json"
+                                },
+                                body: JSON.stringify(wavPutBody)
+                            });
+                        } catch (wavErr) {}
+                    }
                     if (statusEl) {
                         statusEl.className = "p-3 rounded-lg text-xs font-medium bg-emerald-50 text-emerald-800 border border-emerald-200";
                         statusEl.textContent = `Successfully published ${APP_VERSION} Beta to ${owner}/${repo} (${branch})!`;
@@ -5404,6 +6349,7 @@
             }
             setTimeout(() => {
                 refreshAllFeeds(false);
+                generateDailyRadioBriefing(false, false);
             }, 350);
         });
     </script>

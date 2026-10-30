@@ -2235,6 +2235,61 @@ window.stockTrackerData = [
         "note": "APAC Tier-1 Smart Construction & Robotics Benchmark Operating in Japan, ANZ & USA",
         "url": "https://www.obayashi.co.jp/en/ir/",
         "region": "APAC"
+    },
+    {
+        "name": "Hexagon AB",
+        "ticker": "STO: HEXA-B (Stockholm, EMEA / Global)",
+        "yahooSymbol": "HEXA-B.ST",
+        "price": "SEK 112.40",
+        "change": "+1.48%",
+        "isPositive": true,
+        "note": "Leica Geosystems Reality Capture, BricsCAD & Civil Survey Across EMEA, USA & APAC",
+        "url": "https://investors.hexagon.com/",
+        "region": "EMEA"
+    },
+    {
+        "name": "Dassault Systèmes",
+        "ticker": "EPA: DSY (Paris, EMEA / Global)",
+        "yahooSymbol": "DSY.PA",
+        "price": "€36.85",
+        "change": "+1.15%",
+        "isPositive": true,
+        "note": "3DEXPERIENCE, CATIA & Megaproject Virtual Twins Across EMEA, USA & APAC",
+        "url": "https://investor.3ds.com/",
+        "region": "EMEA"
+    },
+    {
+        "name": "PTC Inc.",
+        "ticker": "NASDAQ: PTC (USA / Global)",
+        "yahooSymbol": "PTC",
+        "price": "$186.90",
+        "change": "+1.62%",
+        "isPositive": true,
+        "note": "Industrial IoT (ThingWorx), Vuforia AR Field Inspection & Windchill PLM",
+        "url": "https://investor.ptc.com/",
+        "region": "USA"
+    },
+    {
+        "name": "Schneider Electric",
+        "ticker": "EPA: SU (Paris, EMEA / Global)",
+        "yahooSymbol": "SU.PA",
+        "price": "€241.50",
+        "change": "+2.12%",
+        "isPositive": true,
+        "note": "EcoStruxure Building Operations, AVEVA Industrial Twins, ETAP & Grid Lifecycle",
+        "url": "https://www.se.com/ww/en/about-us/investor-relations/",
+        "region": "EMEA"
+    },
+    {
+        "name": "Siemens AG",
+        "ticker": "ETR: SIE (Munich, EMEA / Global)",
+        "yahooSymbol": "SIE.DE",
+        "price": "€184.30",
+        "change": "+1.74%",
+        "isPositive": true,
+        "note": "Building X Smart Operations, Grid Digital Twins & Electrification Lifecycle",
+        "url": "https://www.siemens.com/global/en/company/investor-relations.html",
+        "region": "EMEA"
     }
 ];
 
@@ -2391,87 +2446,813 @@ window.linkLibraryData = [
 
 window.AI_VERTICAL_GROWTH_SERIES = {
     "all": {
-        "label": "Composite All-Vertical Construction Growth (% YoY)",
-        "data": [
-            11.4,
-            12.8,
-            13.9,
-            14.7,
-            15.6,
-            16.2
-        ],
+        "label": "All-Vertical Construction Growth (% YoY)",
+        "data": [11.4, 12.8, 13.9, 14.7, 15.6, 16.2],
         "color": "#113E5D",
         "bg": "rgba(17, 62, 93, 0.12)",
-        "caption": "Showing: Composite All-Vertical Construction Growth (+16.2% YoY)"
+        "caption": "All-Vertical Construction Growth (+16.2% YoY)"
     },
     "Data Centers & Mfg": {
-        "label": "Data Centers & Advanced Mfg Growth (% YoY)",
-        "data": [
-            19.5,
-            21.8,
-            23.4,
-            25.1,
-            26.8,
-            28
-        ],
+        "label": "Data Centers & Mfg Growth (% YoY)",
+        "data": [19.5, 21.8, 23.4, 25.1, 26.8, 28],
         "color": "#F59E0B",
         "bg": "rgba(245, 158, 11, 0.16)",
-        "caption": "Showing: Data Centers & Advanced Mfg (+28.0% YoY CapEx Velocity)"
+        "caption": "Data Centers & Mfg (+28.0% YoY)"
     },
     "Energy & Grid": {
-        "label": "Energy & Grid Modernization Growth (% YoY)",
-        "data": [
-            15.2,
-            16.9,
-            18.3,
-            19.8,
-            21.1,
-            22
-        ],
+        "label": "Energy & Grid Growth (% YoY)",
+        "data": [15.2, 16.9, 18.3, 19.8, 21.1, 22],
         "color": "#10B981",
         "bg": "rgba(16, 185, 129, 0.14)",
-        "caption": "Showing: Energy & Grid Modernization (+22.0% YoY CapEx Velocity)"
+        "caption": "Energy & Grid (+22.0% YoY)"
     },
     "Civil & Transport": {
-        "label": "Civil & Transport Infrastructure Growth (% YoY)",
-        "data": [
-            12,
-            13.1,
-            14,
-            14.8,
-            15.5,
-            16
-        ],
+        "label": "Civil & Transport Growth (% YoY)",
+        "data": [12, 13.1, 14, 14.8, 15.5, 16],
         "color": "#0284C7",
         "bg": "rgba(2, 132, 199, 0.14)",
-        "caption": "Showing: Civil & Transport Infrastructure (+16.0% YoY IIJA/TEN-T Lettings)"
+        "caption": "Civil & Transport (+16.0% YoY)"
     },
     "Healthcare & Life Sci": {
-        "label": "Healthcare & Life Sciences Growth (% YoY)",
-        "data": [
-            8.4,
-            9.1,
-            9.6,
-            10.2,
-            10.7,
-            11
-        ],
+        "label": "Healthcare & Life Sci Growth (% YoY)",
+        "data": [8.4, 9.1, 9.6, 10.2, 10.7, 11],
         "color": "#6366F1",
         "bg": "rgba(99, 102, 241, 0.14)",
-        "caption": "Showing: Healthcare & Life Sciences (+11.0% YoY IPD & Cleanroom CapEx)"
+        "caption": "Healthcare & Life Sci (+11.0% YoY)"
     },
     "Commercial & Inst": {
-        "label": "Commercial & Institutional Growth (% YoY)",
-        "data": [
-            2.1,
-            2.5,
-            2.9,
-            3.3,
-            3.7,
-            4
-        ],
+        "label": "Commercial & Inst Growth (% YoY)",
+        "data": [2.1, 2.5, 2.9, 3.3, 3.7, 4],
         "color": "#64748B",
         "bg": "rgba(100, 116, 139, 0.14)",
-        "caption": "Showing: Commercial & Institutional (+4.0% YoY — Tight SLOOS Credit)"
+        "caption": "Commercial & Inst (+4.0% YoY)"
     }
 };
+
+// ==========================================
+// GTM ENHANCEMENT 1: GRANULAR WORKFLOW TAXONOMY & DISRUPTOR MATRIX
+// ==========================================
+window.WORKFLOW_TAXONOMY_STAGES = [
+    "Design/Authoring",
+    "Pre-Construction/Estimating",
+    "Reality Capture",
+    "Field Execution",
+    "Common Data Environment (ISO 19650)",
+    "Facility Operations"
+];
+
+window.VENDOR_WORKFLOW_TAXONOMY_MAP = {
+    "Autodesk": ["Design/Authoring", "Pre-Construction/Estimating", "Field Execution", "Common Data Environment (ISO 19650)", "Facility Operations"],
+    "Nemetschek Group / Bluebeam": ["Design/Authoring", "Pre-Construction/Estimating", "Field Execution", "Common Data Environment (ISO 19650)", "Facility Operations"],
+    "Bluebeam": ["Pre-Construction/Estimating", "Field Execution", "Common Data Environment (ISO 19650)"],
+    "Egnyte": ["Common Data Environment (ISO 19650)", "Field Execution", "Facility Operations"],
+    "Procore Technologies": ["Pre-Construction/Estimating", "Field Execution", "Common Data Environment (ISO 19650)"],
+    "Bentley Systems": ["Design/Authoring", "Reality Capture", "Common Data Environment (ISO 19650)", "Facility Operations"],
+    "Trimble": ["Design/Authoring", "Pre-Construction/Estimating", "Reality Capture", "Field Execution", "Common Data Environment (ISO 19650)"],
+    "Aurigo Software": ["Pre-Construction/Estimating", "Field Execution", "Facility Operations"],
+    "HCSS": ["Pre-Construction/Estimating", "Field Execution"],
+    "Slate.ai": ["Pre-Construction/Estimating", "Field Execution"],
+    "Topcon Positioning Systems": ["Reality Capture", "Field Execution"],
+    "OFC Desk": ["Design/Authoring", "Pre-Construction/Estimating"],
+    "CivCore": ["Design/Authoring", "Field Execution"],
+    "Hexagon AB": ["Reality Capture", "Design/Authoring", "Field Execution", "Facility Operations"],
+    "Dassault Systèmes": ["Design/Authoring", "Common Data Environment (ISO 19650)", "Facility Operations"],
+    "PTC": ["Field Execution", "Facility Operations"],
+    "Schneider Electric": ["Design/Authoring", "Facility Operations"],
+    "Siemens": ["Facility Operations", "Common Data Environment (ISO 19650)"],
+    "OpenSpace": ["Reality Capture", "Field Execution"],
+    "DroneDeploy": ["Reality Capture", "Field Execution"],
+    "TestFit": ["Design/Authoring", "Pre-Construction/Estimating"],
+    "Hypar": ["Design/Authoring", "Pre-Construction/Estimating"],
+    "Finch3D": ["Design/Authoring"],
+    "Beck Tech (DESTINI)": ["Pre-Construction/Estimating"],
+    "Togal.AI": ["Pre-Construction/Estimating"],
+    "Revizto": ["Design/Authoring", "Field Execution", "Common Data Environment (ISO 19650)"],
+    "Asite": ["Common Data Environment (ISO 19650)", "Field Execution", "Facility Operations"]
+};
+
+// Enrich existing softwareOemData with workflowTaxonomy tags
+(window.softwareOemData || []).forEach(v => {
+    v.workflowTaxonomy = window.VENDOR_WORKFLOW_TAXONOMY_MAP[v.name] || ["Design/Authoring", "Common Data Environment (ISO 19650)"];
+});
+
+// Dedicated Public Industrial/Digital Twin OEMs + Private/Scale-Up Disruptor Matrix
+window.disruptorMatrixData = [
+    {
+        "name": "OpenSpace",
+        "category": "Reality Capture",
+        "segment": "Private Scale-Up",
+        "status": "Private Scale-Up",
+        "badge": "San Francisco, USA • Global AI 360° Capture",
+        "hq": "San Francisco, USA (Global: US / EMEA / APAC)",
+        "region": "Global",
+        "verticals": ["Data Centers & Mfg", "Healthcare & Life Sci", "Commercial & Inst"],
+        "domain": "openspace.ai",
+        "relationship": "complementary",
+        "workflowTaxonomy": ["Reality Capture", "Field Execution"],
+        "summary": "AI-powered 360° wearable jobsite reality capture platform with automated BIM-to-field progress tracking (OpenSpace BIM+ & Track) integrated with Autodesk Construction Cloud, Procore, and PlanGrid.",
+        "gtmAngle": "High-attach partner add-on for Hyperscale Data Center & Healthcare GCs seeking automated percent-complete verification synced into ACC Build.",
+        "url": "https://www.openspace.ai/resources/"
+    },
+    {
+        "name": "DroneDeploy",
+        "category": "Reality Capture",
+        "segment": "Private Scale-Up",
+        "status": "Private Scale-Up",
+        "badge": "San Francisco, USA • Aerial & Ground Robotics",
+        "hq": "San Francisco, USA (US / UK / AU)",
+        "region": "Global",
+        "verticals": ["Civil & Transport", "Energy & Grid", "Data Centers & Mfg"],
+        "domain": "dronedeploy.com",
+        "relationship": "complementary",
+        "workflowTaxonomy": ["Reality Capture", "Field Execution"],
+        "summary": "Unified aerial photogrammetry, ground robotics, and 360° interior reality capture platform delivering earthwork cut/fill volumetrics and thermal inspection across civil, solar, and commercial sites.",
+        "gtmAngle": "Pair with Autodesk Civil 3D, Topcon/Trimble machine control, and Egnyte Smart Cache to manage multi-gigabyte orthomosaic and point-cloud archives.",
+        "url": "https://www.dronedeploy.com/blog/"
+    },
+    {
+        "name": "TestFit",
+        "category": "AI & Generative Feasibility",
+        "segment": "Private Scale-Up",
+        "status": "Private Scale-Up",
+        "badge": "Dallas, TX, USA • Real-Time Site Feasibility AI",
+        "hq": "Dallas, TX, USA",
+        "region": "USA",
+        "verticals": ["Commercial & Inst", "Data Centers & Mfg"],
+        "domain": "testfit.io",
+        "relationship": "complementary",
+        "workflowTaxonomy": ["Design/Authoring", "Pre-Construction/Estimating"],
+        "summary": "Real-time generative AI site feasibility configurator for multifamily, industrial warehouse, data center, and parking layouts with instant pro-forma yield and direct export to Revit and Autodesk Forma.",
+        "gtmAngle": "Accelerates pre-construction pursuit velocity; ARKANCE services bridge TestFit conceptual massing into production Revit LOD 300 models.",
+        "url": "https://www.testfit.io/blog"
+    },
+    {
+        "name": "Hypar",
+        "category": "AI & Generative Feasibility",
+        "segment": "Private Scale-Up",
+        "status": "Private Scale-Up",
+        "badge": "Culver City, CA, USA • Cloud Generative BIM",
+        "hq": "Culver City, CA, USA",
+        "region": "USA",
+        "verticals": ["Commercial & Inst", "Healthcare & Life Sci", "Data Centers & Mfg"],
+        "domain": "hypar.io",
+        "relationship": "disruptor",
+        "workflowTaxonomy": ["Design/Authoring", "Pre-Construction/Estimating"],
+        "summary": "Cloud-native generative building systems platform enabling computational designers and product manufacturers to codify C#/Python spatial rules and generate full BIM assemblies in the browser.",
+        "gtmAngle": "Position ARKANCE Be.Smart (Holixa) + Autodesk Forma as the enterprise-governed alternative with native Revit family fidelity.",
+        "url": "https://hypar.io/blog"
+    },
+    {
+        "name": "Finch3D",
+        "category": "AI & Generative Feasibility",
+        "segment": "Private Scale-Up",
+        "status": "Private Scale-Up",
+        "badge": "Malmö, Sweden • Graph AI Plan Optimization",
+        "hq": "Malmö, Sweden (EMEA / Global)",
+        "region": "EMEA",
+        "verticals": ["Commercial & Inst"],
+        "domain": "finch3d.com",
+        "relationship": "complementary",
+        "workflowTaxonomy": ["Design/Authoring"],
+        "summary": "European generative architectural floor-plan optimization tool using graph technology and AI constraints with live bi-directional plugins for Autodesk Revit, Rhino, and Grasshopper.",
+        "gtmAngle": "Strong European architectural practice door-opener for ARKANCE EMEA consulting and Autodesk Forma/Revit expansion.",
+        "url": "https://www.finch3d.com/"
+    },
+    {
+        "name": "Beck Tech (DESTINI)",
+        "category": "Specialized Pre-Con & Estimating",
+        "segment": "Private Scale-Up",
+        "status": "Private Scale-Up",
+        "badge": "Dallas, TX, USA • Enterprise 5D Estimating",
+        "hq": "Dallas, TX, USA",
+        "region": "USA",
+        "verticals": ["Commercial & Inst", "Healthcare & Life Sci", "Data Centers & Mfg"],
+        "domain": "beck-technology.com",
+        "relationship": "disruptor",
+        "workflowTaxonomy": ["Pre-Construction/Estimating"],
+        "summary": "Enterprise pre-construction cost estimating and historical cost benchmarking platform (DESTINI Estimator & Bid Day) widely adopted by ENR Top 400 commercial general contractors.",
+        "gtmAngle": "Competes with Autodesk Takeoff / Procore Estimating; ARKANCE integrates Revit 5D QTO parameters and Bluebeam takeoffs into DESTINI.",
+        "url": "https://www.beck-technology.com/blog"
+    },
+    {
+        "name": "Togal.AI",
+        "category": "Specialized Pre-Con & Estimating",
+        "segment": "Private Scale-Up",
+        "status": "Private Scale-Up",
+        "badge": "Miami, FL, USA • AI Automated 2D Takeoff",
+        "hq": "Miami, FL, USA",
+        "region": "USA",
+        "verticals": ["Commercial & Inst", "Data Centers & Mfg"],
+        "domain": "togal.ai",
+        "relationship": "disruptor",
+        "workflowTaxonomy": ["Pre-Construction/Estimating"],
+        "summary": "Deep-learning automated 2D PDF plan takeoff and GPT-powered specification search tool that detects rooms, walls, and counts in seconds.",
+        "gtmAngle": "Defend and expand Bluebeam Revu / Bluebeam Max (MCP AI) + Autodesk Takeoff by emphasizing multi-discipline review and ISO 19650 CDE auditability.",
+        "url": "https://www.togal.ai/news"
+    },
+    {
+        "name": "HCSS",
+        "category": "Specialized Pre-Con & Estimating",
+        "segment": "ARKANCE Strategic Partner",
+        "status": "ARKANCE Strategic Partner",
+        "badge": "Sugar Land, TX, USA • Heavy Civil Estimating & Field",
+        "hq": "Sugar Land, TX, USA",
+        "region": "USA",
+        "verticals": ["Civil & Transport", "Energy & Grid"],
+        "domain": "hcss.com",
+        "relationship": "partner",
+        "workflowTaxonomy": ["Pre-Construction/Estimating", "Field Execution"],
+        "summary": "North American gold standard for heavy civil, DOT highway, bridge, and utility estimating (HeavyBid), timecards/production (HeavyJob), safety, and fleet telematics.",
+        "gtmAngle": "Core ARKANCE USA differentiator: connect Civil 3D corridor quantities directly into HCSS HeavyBid and Autodesk Construction Cloud.",
+        "url": "https://www.hcss.com/news/"
+    },
+    {
+        "name": "Bluebeam (Standalone Breakout)",
+        "category": "CDE & Niche Collaboration",
+        "segment": "ARKANCE Sapphire Partner",
+        "status": "ARKANCE Sapphire Partner",
+        "badge": "Pasadena, CA, USA • Global PDF Markup & Max AI",
+        "hq": "Pasadena, CA, USA (Nemetschek Group)",
+        "region": "Global",
+        "verticals": ["Data Centers & Mfg", "Civil & Transport", "Commercial & Inst", "Healthcare & Life Sci", "Energy & Grid"],
+        "domain": "bluebeam.com",
+        "relationship": "partner",
+        "workflowTaxonomy": ["Pre-Construction/Estimating", "Field Execution", "Common Data Environment (ISO 19650)"],
+        "summary": "Ubiquitous AEC markup, digital submittal review, Studio real-time collaboration, and Bluebeam Max (Model Context Protocol AI) platform used by 3M+ professionals globally.",
+        "gtmAngle": "As a global Bluebeam Sapphire Partner, ARKANCE bundles Bluebeam Cloud + ACC connectors to block Procore and standalone point-tool displacement.",
+        "url": "https://www.bluebeam.com/company/newsroom/"
+    },
+    {
+        "name": "Revizto",
+        "category": "CDE & Niche Collaboration",
+        "segment": "Private Scale-Up",
+        "status": "Private Scale-Up",
+        "badge": "Lausanne, Switzerland • 2D/3D BIM Issue Tracker",
+        "hq": "Lausanne, Switzerland (US / EMEA / ANZ)",
+        "region": "Global",
+        "verticals": ["Data Centers & Mfg", "Healthcare & Life Sci", "Civil & Transport"],
+        "domain": "revizto.com",
+        "relationship": "disruptor",
+        "workflowTaxonomy": ["Design/Authoring", "Field Execution", "Common Data Environment (ISO 19650)"],
+        "summary": "Integrated 2D/3D BIM issue tracking, clash automation, and real-time VR/model coordination hub popular on complex healthcare, aviation, and data center megaprojects.",
+        "gtmAngle": "Position Autodesk Model Coordination + Navisworks Manage + ACC Issues (included in EBA/ACC bundles) to eliminate redundant per-user Revizto spend.",
+        "url": "https://revizto.com/en/news/"
+    },
+    {
+        "name": "Asite",
+        "category": "CDE & Niche Collaboration",
+        "segment": "Private Scale-Up",
+        "status": "Private Scale-Up",
+        "badge": "London, UK • ISO 19650 Capital CDE",
+        "hq": "London, UK (EMEA / USA / ANZ)",
+        "region": "EMEA",
+        "verticals": ["Civil & Transport", "Commercial & Inst", "Energy & Grid"],
+        "domain": "asite.com",
+        "relationship": "disruptor",
+        "workflowTaxonomy": ["Common Data Environment (ISO 19650)", "Field Execution", "Facility Operations"],
+        "summary": "UK-headquartered BS EN ISO 19650 Common Data Environment and capital supply-chain management platform with strong footprint in UK public infrastructure and Tier-1 contractors.",
+        "gtmAngle": "Displace legacy Asite CDE silos with Autodesk Docs / ACC + Egnyte sovereign governance + ARKANCE UK ISO 19650 Golden Thread consulting.",
+        "url": "https://www.asite.com/news"
+    },
+    {
+        "name": "Hexagon AB (Leica / Bricsys)",
+        "category": "Reality Capture",
+        "segment": "Public OEM (STO: HEXA-B)",
+        "status": "Public OEM (STO: HEXA-B)",
+        "badge": "Stockholm, Sweden • Leica Reality Capture & BricsCAD",
+        "hq": "Stockholm, Sweden (Global)",
+        "region": "Global",
+        "verticals": ["Civil & Transport", "Data Centers & Mfg", "Energy & Grid"],
+        "domain": "hexagon.com",
+        "relationship": "disruptor",
+        "workflowTaxonomy": ["Reality Capture", "Design/Authoring", "Field Execution", "Facility Operations"],
+        "summary": "Global reality capture leader (Leica RTC360/BLK laser scanners, HxDR cloud) paired with BricsCAD BIM and EcoSys enterprise project controls.",
+        "gtmAngle": "Ingest Leica point clouds seamlessly into Autodesk ReCap Pro, Revit, and Civil 3D while defending Revit/AutoCAD seats against BricsCAD price plays.",
+        "url": "https://hexagon.com/company/newsroom"
+    },
+    {
+        "name": "Dassault Systèmes (3DEXPERIENCE)",
+        "category": "CDE & Niche Collaboration",
+        "segment": "Public OEM (EPA: DSY)",
+        "status": "Public OEM (EPA: DSY)",
+        "badge": "Paris, France • 3DEXPERIENCE & CATIA Virtual Twins",
+        "hq": "Vélizy-Villacoublay, France (Global)",
+        "region": "EMEA",
+        "verticals": ["Data Centers & Mfg", "Energy & Grid", "Civil & Transport"],
+        "domain": "3ds.com",
+        "relationship": "disruptor",
+        "workflowTaxonomy": ["Design/Authoring", "Common Data Environment (ISO 19650)", "Facility Operations"],
+        "summary": "Aerospace/manufacturing PLM giant targeting modular DfMA, nuclear SMRs, and complex façade engineering via CATIA and 3DEXPERIENCE virtual twins.",
+        "gtmAngle": "Highlight 12–18 month 3DEXPERIENCE implementation complexity vs. ARKANCE’s rapid Revit-to-Inventor/Fusion IC (Industrialized Construction) bridge.",
+        "url": "https://www.3ds.com/newsroom"
+    },
+    {
+        "name": "Schneider Electric & Siemens Smart Ops",
+        "category": "CDE & Niche Collaboration",
+        "segment": "Public OEMs (EPA: SU / ETR: SIE)",
+        "status": "Public OEMs (EPA: SU / ETR: SIE)",
+        "badge": "Paris & Munich • EcoStruxure, AVEVA & Building X",
+        "hq": "Paris, France & Munich, Germany",
+        "region": "Global",
+        "verticals": ["Energy & Grid", "Data Centers & Mfg", "Healthcare & Life Sci"],
+        "domain": "se.com",
+        "relationship": "complementary",
+        "workflowTaxonomy": ["Design/Authoring", "Common Data Environment (ISO 19650)", "Facility Operations"],
+        "summary": "Schneider Electric (EcoStruxure, AVEVA, ETAP, RIB Software) and Siemens (Building X) dominate electrical digital twins, microgrids, and BMS lifecycle operations.",
+        "gtmAngle": "High-value handover play: ARKANCE structures COBie / ISO 19650 BIM asset data in Autodesk Tandem & ACC to feed Schneider EcoStruxure and Siemens Building X.",
+        "url": "https://www.se.com/ww/en/about-us/newsroom/"
+    }
+];
+
+// ==========================================
+// GTM ENHANCEMENT 2: SALES ENABLEMENT "BATTLECARD & OBJECTION ENGINE"
+// ==========================================
+window.VENDOR_BATTLECARDS = {
+    "Autodesk": {
+        vendorName: "Autodesk (ARKANCE Platinum Partner Playbook)",
+        relationshipBadge: "Core Ecosystem OEM • Co-Sell & Services Attach",
+        licensingModel: "Named User Subscriptions + Flex Consumption Tokens + Enterprise Business Agreement (EBA)",
+        whyUs: [
+            "Global #1 Platinum Scale: ARKANCE deploys 1,300+ specialists across the USA, 18 EMEA countries, and ANZ—delivering unified global EBA/ACC rollouts that regional VARs cannot staff.",
+            "Proprietary Be.Smart (Holixa) IP: Automates up to 35% of repetitive Revit, Civil 3D, and Plant 3D modeling tasks directly on top of core Autodesk seats.",
+            "Multi-Vendor Ecosystem Glue: Only ARKANCE natively bridges Autodesk Construction Cloud with Bluebeam Max, Egnyte CMMC 2.0/NIS2 governance, HCSS HeavyBid, and Aurigo."
+        ],
+        landmines: [
+            "How are you currently standardizing ISO 19650 / DOT BIM Execution Plans across your US, European, and APAC project offices without custom middleware?",
+            "When specialty subcontractors submit PDFs and models from outside Autodesk Build, how do you prevent manual double-entry between Bluebeam Studio, Egnyte, and ACC?",
+            "Are your senior engineers spending 20%+ of billable hours on manual sheet setup, parameter syncing, and clash grouping that Be.Smart Holixa automates out of the box?"
+        ]
+    },
+    "Procore Technologies": {
+        vendorName: "Procore Technologies",
+        relationshipBadge: "Primary Field & PM Competitor (vs. Autodesk Build / ACC)",
+        licensingModel: "Annual Construction Volume (% of ACV / Turnover Tier) with Unlimited Users — High Renewal Escalation Risk",
+        whyUs: [
+            "Eliminate the 'Double Tax' on Backlog Growth: Autodesk Build offers predictable per-user or project-tier pricing inside existing Autodesk renewals—avoiding Procore’s punitive ACV volume tax when material costs inflate project values.",
+            "True Design-to-Field Continuity: Procore has zero native BIM authoring; models must be exported across disconnected plugins, whereas ACC unites Revit, Civil 3D, Navisworks, and Build on one common data spine.",
+            "Partner-Led ERP & Civil Depth: ARKANCE integrates ACC directly with HCSS HeavyBid, ERP financials, Bluebeam Cloud, and Egnyte—delivering tailored workflows instead of rigid SaaS lock-in."
+        ],
+        landmines: [
+            "What happens to your software renewal cost next year if hyperscale equipment inflation increases your total contract value by 25%, even though your headcount stays flat?",
+            "How many hours per week do your VDC managers lose re-exporting Revit and Civil 3D models into a third-party viewer because your field platform lacks a native design authoring kernel?",
+            "Can your current platform enforce BS EN ISO 19650 container state workflows (WIP, Shared, Published) and native IFC 4.3 civil corridor validation out of the box?"
+        ]
+    },
+    "Bentley Systems": {
+        vendorName: "Bentley Systems",
+        relationshipBadge: "Infrastructure & Civil Competitor (vs. Civil 3D + InfoWorks + ACC)",
+        licensingModel: "E365 Consumption Per-Day Usage + Practitioner Named Licenses + ProjectWise Hosting",
+        whyUs: [
+            "Predictable TCO vs. Daily Metering Anxiety: Autodesk AEC Collection + ACC provides predictable subscription economics without penalizing engineers every time they open a discipline tool for 15 minutes.",
+            "Unified Building + Civil + Water Workflow: Most infrastructure projects combine horizontal civil corridors with vertical stations, data centers, or treatment plants—where Revit + Civil 3D + Innovyze dominate.",
+            "Rapid DOT Digital Delivery Onboarding: ARKANCE USA & ANZ provide pre-built State DOT and ISO 19650 Civil 3D templates + Pinnacle Series LMS training."
+        ],
+        landmines: [
+            "How do you control quarterly E365 consumption overages when sub-consultants or junior engineers open specialized civil or geotechnical modules across multiple projects?",
+            "When your civil corridor connects into a vertical transit station, water treatment plant, or data center building, how do you avoid costly translation loss between OpenBuildings/MicroStation and Revit?",
+            "Do your project teams have local, hands-on implementation specialists to configure state DOT IFC 4.3 deliverables and automated quantity takeoffs into HCSS?"
+        ]
+    },
+    "Trimble": {
+        vendorName: "Trimble (Tekla / Viewpoint / ProjectSight)",
+        relationshipBadge: "Co-opetition: Field Hardware Partner / Software Competitor",
+        licensingModel: "Trimble Construction One (TC1) Bundled Tiers + Named Per-Seat Subscriptions (Tekla)",
+        whyUs: [
+            "Open Multi-Vendor Hardware + BIM Integration: ARKANCE integrates Trimble and Topcon GNSS/total stations directly with Autodesk Civil 3D, Revit, and HCSS—giving contractors freedom of choice without TC1 lock-in.",
+            "End-to-End Multi-Discipline BIM vs. Structural Silos: While Tekla excels in steel/precast detailing, Autodesk AEC Collection + ARKANCE Be.Smart covers architecture, MEP, civil, water, and cloud CDE under one roof.",
+            "Superior Field CDE Adoption: Autodesk Build + Bluebeam Cloud enjoy 3x higher subcontractor adoption than Trimble Connect or ProjectSight."
+        ],
+        landmines: [
+            "Outside of structural steel detailing, how many of your MEP, architectural, and civil trade partners actually collaborate natively inside Trimble Connect versus Autodesk Construction Cloud and Bluebeam?",
+            "If you bundle your field management inside your accounting ERP contract (TC1), what leverage do you have at renewal if field teams reject the project management UI?",
+            "How seamlessly do your survey and layout crews round-trip QA/QC deviations back into the master Revit and Civil 3D design models?"
+        ]
+    },
+    "Nemetschek Group / Bluebeam": {
+        vendorName: "Bluebeam & Nemetschek Group (ARKANCE Sapphire Playbook)",
+        relationshipBadge: "Strategic Partner (Bluebeam Sapphire) / Competing BIM (Allplan/Graphisoft)",
+        licensingModel: "Named User Tiered Subscriptions (Basics, Core, Complete + Bluebeam Max MCP AI)",
+        whyUs: [
+            "Global Bluebeam Sapphire Authority: ARKANCE is one of the world’s largest Bluebeam partners, automating live Studio-to-Autodesk Construction Cloud and Egnyte synchronization.",
+            "Defend Against Point-Tool AI Startups: Bluebeam Max (built on Model Context Protocol) delivers governed AI specification and drawing review inside the tool 94% of US GCs already trust.",
+            "Harmonized Enterprise Licensing: Consolidate fragmented credit-card Revu seats across global offices into a single co-termed enterprise agreement with Pinnacle Series LMS training."
+        ],
+        landmines: [
+            "How many unmanaged Bluebeam seats are scattered across individual credit cards in your regional offices without centralized SSO or Studio security governance?",
+            "When markups and RFIs are completed in Bluebeam Studio sessions, are they automatically archived back into your ISO 19650 Common Data Environment (ACC or Egnyte)?",
+            "Have you evaluated Bluebeam Max (MCP AI) to automate submittal and overlay checks before buying another disconnected AI point solution?"
+        ]
+    },
+    "Bluebeam (Standalone Breakout)": {
+        vendorName: "Bluebeam (ARKANCE Sapphire Partner Playbook)",
+        relationshipBadge: "ARKANCE Sapphire Partner • High-Velocity Attach & Renewal",
+        licensingModel: "Named User Subscriptions (Core / Complete / Bluebeam Max AI)",
+        whyUs: [
+            "Sapphire-Tier Integration Services: ARKANCE connects Bluebeam Studio & Cloud bi-directionally with Autodesk Docs/Build and Egnyte.",
+            "Custom Tool Chest Standardization: ARKANCE builds discipline-specific dynamic tool chests for QTO, electrical/MEP review, and DOT civil QA.",
+            "Enterprise Seat Consolidation: Convert legacy perpetual/scattered licenses into a unified global enterprise agreement."
+        ],
+        landmines: [
+            "Are your estimators and project engineers using standardized company tool chests so every measurement automatically populates your cost codes?",
+            "How do you ensure closed Bluebeam Studio sessions are automatically archived into your permanent project record in Autodesk Docs or Egnyte?",
+            "Are your teams leveraging the new Bluebeam Max MCP AI integration to compare multi-hundred-page drawing revisions in seconds?"
+        ]
+    },
+    "Egnyte": {
+        vendorName: "Egnyte (ARKANCE Sovereign Cloud & Cyber Playbook)",
+        relationshipBadge: "Strategic Cloud & Cybersecurity Partner OEM",
+        licensingModel: "Per-User Tiered SaaS + Smart Cache Edge + GovCloud CMMC 2.0 Add-On",
+        whyUs: [
+            "Zero-Latency Large BIM File Sync: Egnyte Smart Cache delivers LAN-speed access to multi-gigabyte Civil 3D, Revit, and point-cloud files in remote jobsite trailers.",
+            "Turnkey CMMC 2.0 & EU NIS2 Compliance: Satisfies strict USA defense/energy and European critical infrastructure data sovereignty audits without slowing engineering workflows.",
+            "Native ACC & Bluebeam Bridge: ARKANCE deploys Egnyte alongside Autodesk Construction Cloud to govern unstructured enterprise archives and ransomware recovery."
+        ],
+        landmines: [
+            "How long does it currently take a remote jobsite trailer or international JV office to open a 15GB point cloud or federated Navisworks model over VPN/SharePoint?",
+            "If audited tomorrow under USA DoD CMMC 2.0 or the EU NIS2 Directive, can you prove zero-trust data residency and instant ransomware rollback across all subcontractor file shares?",
+            "How are you preventing proprietary semiconductor or grid schematics from leaking into public AI models when engineers search project PDFs?"
+        ]
+    },
+    "Revizto": {
+        vendorName: "Revizto",
+        relationshipBadge: "BIM Coordination & Clash Disruptor (vs. Navisworks + ACC Model Coordination)",
+        licensingModel: "High-Tier Named User Subscriptions (Annual / Multi-Year Lock-In)",
+        whyUs: [
+            "Eliminate Redundant Shelfware Spend: Most enterprise AEC firms already own Navisworks Manage and Autodesk BIM Collaborate Pro—which include automated cloud clash detection and Revit/AutoCAD issue plugins.",
+            "Single Issue Spine From Design to Field: Issues created in Revizto still have to be synced into ACC Build or Procore for field resolution; keeping coordination native in ACC eliminates sync failures.",
+            "ARKANCE Be.Smart Clash Automation: ARKANCE configures automated clash rules, saved viewpoints, and Power BI dashboards directly inside ACC + Navisworks at a fraction of Revizto's cost."
+        ],
+        landmines: [
+            "Why pay a second per-user tax for clash issue tracking when your existing Autodesk AEC Collection and BIM Collaborate Pro seats already include automated cloud clash matrices and native Revit issue plugins?",
+            "When an issue is flagged during 3D BIM coordination, can your field superintendents convert it directly into a formal RFI, change order, or payment impact without switching platforms?",
+            "How do you maintain a single ISO 19650 audit trail when design issues live in Revizto but contractual drawings and submittals live in Autodesk Docs?"
+        ]
+    },
+    "Asite": {
+        vendorName: "Asite",
+        relationshipBadge: "EMEA / UK CDE Competitor (vs. Autodesk Docs/ACC + Egnyte)",
+        licensingModel: "Project / Enterprise CDE Hosting Tier + Custom Professional Services",
+        whyUs: [
+            "Frictionless Authoring-to-CDE Connection: Autodesk Docs + BIM Collaborate Pro connect natively inside Revit and Civil 3D via Desktop Connector—eliminating Asite’s manual browser upload/download friction.",
+            "UK Building Safety Act Golden Thread Turnkey: ARKANCE UK delivers pre-configured BS EN ISO 19650 templates inside ACC that designers and Tier-2 trade contractors adopt immediately.",
+            "Global Usability & Lower Services Overhead: Avoid expensive custom Asite workflow scripting whenever project container rules change."
+        ],
+        landmines: [
+            "How many minutes per day do your architects and engineers spend manually exporting, renaming, and uploading files into a web portal instead of working directly from Revit and Civil 3D?",
+            "What is your sub-consultant adoption rate when specialty trades are forced to learn a standalone document portal versus using Autodesk Docs and Bluebeam?",
+            "When you need to modify an ISO 19650 approval workflow mid-project, can your internal BIM manager do it in 5 minutes or do you have to pay vendor consulting fees?"
+        ]
+    },
+    "HCSS": {
+        vendorName: "HCSS (ARKANCE Heavy Civil Partner Playbook)",
+        relationshipBadge: "Strategic Heavy Civil Estimating & Field Operations Partner",
+        licensingModel: "Per-User / Concurrent Module Subscriptions (HeavyBid, HeavyJob, Dispatcher, Safety)",
+        whyUs: [
+            "Turnkey Model-to-Bid Pipeline: ARKANCE connects Autodesk Civil 3D corridor quantities directly into HCSS HeavyBid pay items, cutting DOT bid preparation time by 40%.",
+            "Closed-Loop Field Production: Sync HCSS HeavyJob daily field quantities back into Autodesk Construction Cloud and ERP job-costing.",
+            "Single Civil Transformation Partner: Only ARKANCE combines Autodesk Platinum civil engineering depth with certified HCSS implementation."
+        ],
+        landmines: [
+            "Are your civil estimators still manually re-keying earthwork and pipe quantities from Civil 3D schedules into HeavyBid spreadsheets?",
+            "When field crews log daily production in HeavyJob, does that progress automatically update your 3D BIM status in Autodesk Construction Cloud?",
+            "How are you preparing your estimating and survey teams for mandatory FHWA / State DOT IFC 4.3 digital as-builts?"
+        ]
+    }
+};
+
+// Ensure both whyUs/whyUsTalkingPoints and landmines/landmineQuestions exist on every battlecard
+Object.values(window.VENDOR_BATTLECARDS).forEach(bc => {
+    bc.whyUsTalkingPoints = bc.whyUsTalkingPoints || bc.whyUs || [];
+    bc.whyUs = bc.whyUs || bc.whyUsTalkingPoints;
+    bc.landmineQuestions = bc.landmineQuestions || bc.landmines || [];
+    bc.landmines = bc.landmines || bc.landmineQuestions;
+});
+
+// ==========================================
+// GTM ENHANCEMENT 3: MARKETING ENABLEMENT "SHARE OF VOICE & POSITIONING TRACKER" + INDUSTRY CALENDAR
+// ==========================================
+window.MARKETING_POSITIONING_PILLARS = [
+    {
+        id: "Generative AI & Drafting",
+        label: "Generative AI & Drafting",
+        shortLabel: "Generative AI & Drafting",
+        shareOfVoice: "29%",
+        shareOfVoicePct: 29,
+        momentum: "+42% YoY",
+        gtmHook: "Governed AI (Autodesk Forma, Bluebeam Max MCP & Be.Smart Automation) vs. Unverified Point Tools",
+        campaignHook: "Governed AI (Autodesk Forma, Bluebeam Max MCP & Be.Smart Automation) vs. Unverified Point Tools"
+    },
+    {
+        id: "Off-Site DfMA & Prefab",
+        label: "Off-Site DfMA & Prefab",
+        shortLabel: "Off-Site DfMA & Prefab",
+        shareOfVoice: "24%",
+        shareOfVoicePct: 24,
+        momentum: "+31% YoY",
+        gtmHook: "Bypassing 100-Week Switchgear & Craft Labor Queues via Revit-to-Fabrication Spooling",
+        campaignHook: "Bypassing 100-Week Switchgear & Craft Labor Queues via Revit-to-Fabrication Spooling"
+    },
+    {
+        id: "Reality Capture/Digital Twin",
+        label: "Reality Capture/Digital Twin",
+        shortLabel: "Reality Capture/Digital Twin",
+        shareOfVoice: "19%",
+        shareOfVoicePct: 19,
+        momentum: "+25% YoY",
+        gtmHook: "Drone/LiDAR Verification to ISO 19650 Operational Digital Twins (Tandem / Civil 3D / Topcon)",
+        campaignHook: "Drone/LiDAR Verification to ISO 19650 Operational Digital Twins (Tandem / Civil 3D / Topcon)"
+    },
+    {
+        id: "Carbon & ESG Reporting",
+        label: "Carbon & ESG Reporting",
+        shortLabel: "Carbon & ESG Reporting",
+        shareOfVoice: "14%",
+        shareOfVoicePct: 14,
+        momentum: "+22% YoY",
+        gtmHook: "Automated Embodied Carbon (EPD) Takeoffs for EU CSRD, UK RICS v2, NABERS & US Buy Clean",
+        campaignHook: "Automated Embodied Carbon (EPD) Takeoffs for EU CSRD, UK RICS v2, NABERS & US Buy Clean"
+    },
+    {
+        id: "Federal/CMMC & ISO Compliance",
+        label: "Federal/CMMC & ISO Compliance",
+        shortLabel: "Federal/CMMC & ISO Compliance",
+        shareOfVoice: "14%",
+        shareOfVoicePct: 14,
+        momentum: "+36% YoY",
+        gtmHook: "Audit-Ready Sovereign Cloud CDEs (US DoD CMMC 2.0, FHWA IFC 4.3, UK Golden Thread & EU NIS2)",
+        campaignHook: "Audit-Ready Sovereign Cloud CDEs (US DoD CMMC 2.0, FHWA IFC 4.3, UK Golden Thread & EU NIS2)"
+    }
+];
+
+// Tag liveWireStories and arkanceNewsData with Marketing Positioning Pillars
+const WIRE_PILLAR_MAP = {
+    "wire-1": ["Federal/CMMC & ISO Compliance", "Reality Capture/Digital Twin"],
+    "wire-2": ["Federal/CMMC & ISO Compliance", "Reality Capture/Digital Twin"],
+    "wire-3": ["Federal/CMMC & ISO Compliance", "Carbon & ESG Reporting"],
+    "wire-4": ["Generative AI & Drafting", "Off-Site DfMA & Prefab"],
+    "wire-5": ["Reality Capture/Digital Twin", "Federal/CMMC & ISO Compliance"],
+    "wire-6": ["Off-Site DfMA & Prefab", "Generative AI & Drafting"]
+};
+(window.liveWireStories || []).forEach(w => {
+    w.positioningPillars = WIRE_PILLAR_MAP[w.id] || ["Generative AI & Drafting", "Federal/CMMC & ISO Compliance"];
+});
+
+window.AEC_INDUSTRY_CALENDAR = [
+    {
+        event: "Autodesk University (AU)",
+        dates: "Oct 13–15, 2026",
+        location: "Las Vegas, NV (USA) & Global Digital",
+        region: "USA",
+        cfpStatus: "CFP Closed • Keynotes & Booth Live",
+        theme: "Generative AI & Drafting",
+        pillarFocus: "Generative AI & Drafting",
+        gtmPlay: "Showcase ARKANCE Platinum global scale, Be.Smart Holixa automation, and ACC + Egnyte + HCSS integrations.",
+        url: "https://www.autodesk.com/autodesk-university/"
+    },
+    {
+        event: "Procore Groundbreak",
+        dates: "Nov 9–11, 2026",
+        location: "Houston, TX (USA)",
+        region: "USA",
+        cfpStatus: "Competitive Intercept Active",
+        theme: "Off-Site DfMA & Prefab",
+        pillarFocus: "Off-Site DfMA & Prefab",
+        gtmPlay: "Run 'Avoid the ACV Volume Tax' digital intercept campaigns targeting ENR Top 400 GCs evaluating Autodesk Build + Bluebeam.",
+        url: "https://www.procore.com/groundbreak"
+    },
+    {
+        event: "Trimble Dimensions",
+        dates: "Nov 16–18, 2026",
+        location: "Las Vegas, NV (USA)",
+        region: "USA",
+        cfpStatus: "Field & Heavy Civil Co-Sell",
+        theme: "Reality Capture/Digital Twin",
+        pillarFocus: "Reality Capture/Digital Twin",
+        gtmPlay: "Target heavy civil & DOT contractors pairing GNSS machine control with Autodesk Civil 3D and HCSS HeavyBid.",
+        url: "https://dimensions.trimble.com/"
+    },
+    {
+        event: "Bluebeam Unbound / XCON",
+        dates: "Sep 22–24, 2026",
+        location: "Washington, D.C. (USA) & London/Sydney Roadshows",
+        region: "Global",
+        cfpStatus: "Post-Event Lead Nurture Active",
+        theme: "Generative AI & Drafting",
+        pillarFocus: "Generative AI & Drafting",
+        gtmPlay: "Accelerate Bluebeam Max (MCP AI) & Bluebeam Cloud enterprise upgrades across ARKANCE Sapphire accounts.",
+        url: "https://www.bluebeam.com/"
+    },
+    {
+        event: "Digital Construction Week (DCW)",
+        dates: "Jun 3–4, 2027 (CFP Opens Nov 2026)",
+        location: "ExCeL London (UK / EMEA)",
+        region: "EMEA",
+        cfpStatus: "Call for Papers: Opens Nov 15, 2026",
+        theme: "Federal/CMMC & ISO Compliance",
+        pillarFocus: "Federal/CMMC & ISO Compliance",
+        gtmPlay: "Lead UK Building Safety Act 'Golden Thread', BS EN ISO 19650, and Ofwat AMP8 water sessions across EMEA.",
+        url: "https://www.digitalconstructionweek.com/"
+    },
+    {
+        event: "Futurebuild & BIM World Paris / Munich",
+        dates: "Nov 24–25, 2026 (Munich) / Apr 2027 (Paris)",
+        location: "Munich (Germany) & Paris (France)",
+        region: "EMEA",
+        cfpStatus: "Exhibitor & Speaker Slots Locked",
+        theme: "Carbon & ESG Reporting",
+        pillarFocus: "Carbon & ESG Reporting",
+        gtmPlay: "Position EU CSRD embodied carbon reporting, Autodesk Forma, and sovereign EU cloud CDE compliance.",
+        url: "https://www.bim-world.de/"
+    }
+];
+
+// ==========================================
+// GTM ENHANCEMENT 4: PRODUCT ENABLEMENT "INTEROPERABILITY & OPENBIM RADAR"
+// ==========================================
+window.INTEROPERABILITY_OPENBIM_RADAR = [
+    {
+        vendor: "Autodesk (ACC / Revit / Civil 3D)",
+        category: "Core Partner OEM",
+        apiDocs: "Tier-1 (APS / Forge REST, GraphQL & AEC Data Model API)",
+        apiMaturity: "Tier-1 (APS / Forge REST, GraphQL & AEC Data Model API)",
+        webhooks: "Native Webhooks + Model Context Protocol (MCP) Ready",
+        webhookMcp: "Native Webhooks + Model Context Protocol (MCP) Ready",
+        marketplace: "400+ Certified Apps (ACC App Store)",
+        ifcSupport: "IFC 4.3 Certified (Building & Infrastructure)",
+        bcfSupport: "Native BCF 2.1 / 3.0 Import & Export",
+        iso19650: "Full BS EN ISO 19650 Naming & State Containers",
+        cmmcFedRamp: "FedRAMP Moderate / GovCloud & EU Sovereign AWS",
+        moatScore: "96/100"
+    },
+    {
+        vendor: "Bluebeam (Revu / Cloud / Max AI)",
+        category: "Sapphire Partner OEM",
+        apiDocs: "Tier-1 (Bluebeam Cloud REST API & Studio API)",
+        apiMaturity: "Tier-1 (Bluebeam Cloud REST API & Studio API)",
+        webhooks: "Native Bluebeam Max MCP Server + Studio Webhooks",
+        webhookMcp: "Native Bluebeam Max MCP Server + Studio Webhooks",
+        marketplace: "Certified ACC, Procore & Egnyte Connectors",
+        ifcSupport: "3D PDF / IFC Viewer & Markup Overlay",
+        bcfSupport: "BCF Issue Round-Trip via Studio / Cloud",
+        iso19650: "ISO 19650 Submittal & Review Status Stamps",
+        cmmcFedRamp: "US Gov / DoD Compliant Deployment Options",
+        moatScore: "93/100"
+    },
+    {
+        vendor: "Egnyte (AEC Cloud & GovCloud)",
+        category: "Cloud & Cyber Partner",
+        apiDocs: "Tier-1 (Public REST API + File System Event Streams)",
+        apiMaturity: "Tier-1 (Public REST API + File System Event Streams)",
+        webhooks: "Real-Time Webhooks + Context Studio AI Governance",
+        webhookMcp: "Real-Time Webhooks + Context Studio AI Governance",
+        marketplace: "Native Autodesk ACC, Bluebeam, Procore & Revit Lock Sync",
+        ifcSupport: "Native Browser IFC / RVT / DWG Streaming Preview",
+        bcfSupport: "Pass-Through CDE Repository",
+        iso19650: "Automated ISO 19650 Folder & Metadata Enforcement",
+        cmmcFedRamp: "FedRAMP Authorized + DoD CMMC 2.0 Level 2 + EU NIS2",
+        moatScore: "95/100"
+    },
+    {
+        vendor: "Nemetschek (Allplan / Solibri / Graphisoft)",
+        category: "OpenBIM Partner / OEM",
+        apiDocs: "Tier-2 (Solibri Autorun API / Archicad JSON-Python API)",
+        apiMaturity: "Tier-2 (Solibri Autorun API / Archicad JSON-Python API)",
+        webhooks: "Cloud CDE Webhooks via Nemetschek dTwin",
+        webhookMcp: "Cloud CDE Webhooks via Nemetschek dTwin",
+        marketplace: "buildingSMART OpenBIM Ecosystem Connectors",
+        ifcSupport: "Reference Gold Standard IFC 4 / IFC 4.3 Validation",
+        bcfSupport: "Native BCF Server & Live BCF Connector",
+        iso19650: "Full ISO 19650 Information Delivery Specification (IDS)",
+        cmmcFedRamp: "EU GDPR Sovereign Hosting (Munich / Frankfurt)",
+        moatScore: "91/100"
+    },
+    {
+        vendor: "Procore Technologies",
+        category: "Competing Field OEM",
+        apiDocs: "Tier-1 (Open REST API v1.1 + Developer Portal)",
+        apiMaturity: "Tier-1 (Open REST API v1.1 + Developer Portal)",
+        webhooks: "Granular Project Webhooks + Copilot AI Agents",
+        webhookMcp: "Granular Project Webhooks + Copilot AI Agents",
+        marketplace: "500+ Procore App Marketplace Integrations",
+        ifcSupport: "Viewer-Only (Relies on External BIM Authoring Plugins)",
+        bcfSupport: "BCF Import via Coordination Issues Plugin",
+        iso19650: "Partial (Requires Custom Document Control Add-On)",
+        cmmcFedRamp: "SOC 2 Type II / FedRAMP In-Process Evaluation",
+        moatScore: "84/100"
+    },
+    {
+        vendor: "Bentley Systems (iTwin / ProjectWise)",
+        category: "Competing Civil OEM",
+        apiDocs: "Tier-1 (iTwin Platform REST APIs & Digital Twin SDK)",
+        apiMaturity: "Tier-1 (iTwin Platform REST APIs & Digital Twin SDK)",
+        webhooks: "iTwin Synchronization Webhooks",
+        webhookMcp: "iTwin Synchronization Webhooks",
+        marketplace: "Curated Enterprise Infrastructure Partner Network",
+        ifcSupport: "IFC 4.3 Civil / Rail / Bridge Export & Import",
+        bcfSupport: "BCF 2.1 Support inside iTwin & ProjectWise",
+        iso19650: "Full BS EN ISO 19650 CDE State Workflow",
+        cmmcFedRamp: "FedRAMP High / DoD IL4 Capable (ProjectWise Gov)",
+        moatScore: "89/100"
+    },
+    {
+        vendor: "Trimble (Tekla / Connect / TC1)",
+        category: "Co-opetition OEM",
+        apiDocs: "Tier-1 (Tekla Open API .NET + Trimble Connect REST API)",
+        apiMaturity: "Tier-1 (Tekla Open API .NET + Trimble Connect REST API)",
+        webhooks: "Trimble Connect Webhooks",
+        webhookMcp: "Trimble Connect Webhooks",
+        marketplace: "Trimble Warehouse & TC1 Exchange",
+        ifcSupport: "IFC 4 Structural & Fabrication Reference View Certified",
+        bcfSupport: "Native BCF Topics in Trimble Connect",
+        iso19650: "ISO 19650 CDE Support in Trimble Connect",
+        cmmcFedRamp: "SOC 2 / ISO 27001 Commercial Cloud",
+        moatScore: "88/100"
+    },
+    {
+        vendor: "HCSS & Aurigo (ARKANCE Civil Stack)",
+        category: "ARKANCE Civil Partners",
+        apiDocs: "Tier-2 (HCSS HeavyBid/HeavyJob REST API + Aurigo API)",
+        apiMaturity: "Tier-2 (HCSS HeavyBid/HeavyJob REST API + Aurigo API)",
+        webhooks: "Automated ERP, Telematics & ACC Cost Sync Webhooks",
+        webhookMcp: "Automated ERP, Telematics & ACC Cost Sync Webhooks",
+        marketplace: "Certified Autodesk Construction Cloud & GIS Integrations",
+        ifcSupport: "Ingests Civil 3D & IFC Pay-Item Quantities",
+        bcfSupport: "Field Issue Sync via ACC Build",
+        iso19650: "Aligned with US FHWA / State DOT Digital Delivery",
+        cmmcFedRamp: "FedRAMP Moderate (Aurigo Masterworks Cloud) / SOC 2",
+        moatScore: "90/100"
+    }
+];
+
+// ==========================================
+// GTM ENHANCEMENT 5: PROJECT-TO-ACCOUNT MAPPING (MAJOR PROJECTS)
+// ==========================================
+window.PROJECT_GTM_ACCOUNT_MAP = {
+    "proj-1": {
+        assignedContractors: ["Turner Construction", "DPR Construction", "Clark Construction", "Rosendin Electric JV"],
+        targetSoftwareStack: "Mandated: Revit + Civil 3D + Navisworks Manage + Autodesk Construction Cloud (ACC) CDE; Open to 360° Reality Capture & Modular MEP Spooling",
+        gtmActionTrigger: "Subcontractor MEP Pre-Fab & Be.Smart Pursuit"
+    },
+    "proj-2": {
+        assignedContractors: ["Bechtel", "Hensel Phelps", "Yates Construction", "Exyte Cleanroom JV"],
+        targetSoftwareStack: "Mandated: Revit + AutoCAD Plant 3D + Egnyte CMMC 2.0 GovCloud + ACC Build; Open to High-Precision Laser Scanning QA",
+        gtmActionTrigger: "CMMC 2.0 Sovereign CDE & Cleanroom Spooling Package"
+    },
+    "proj-3": {
+        assignedContractors: ["Kiewit", "Walsh Group", "Skanska USA Civil", "Jacobs / AECOM Lead Design JV"],
+        targetSoftwareStack: "Mandated: Autodesk Civil 3D + IFC 4.3 OpenBIM + HCSS HeavyBid/HeavyJob + Aurigo Masterworks; Open to Automated Drone Earthwork QA",
+        gtmActionTrigger: "DOT Digital Delivery & HCSS-to-Civil 3D Integration"
+    },
+    "proj-4": {
+        assignedContractors: ["McCarthy Building Companies", "DPR Construction", "JE Dunn", "HDR / HOK Design"],
+        targetSoftwareStack: "Mandated: Revit + Autodesk BIM Collaborate Pro + Bluebeam Cloud/Max + ACC Build; Open to Prefab Bathroom/Headwall DfMA Tools",
+        gtmActionTrigger: "IPD Hospital Multi-Trade Coordination & Bluebeam Max Rollout"
+    },
+    "proj-5": {
+        assignedContractors: ["Mace", "Laing O'Rourke", "Mercury Engineering", "BAM Construct", "Dornan JV"],
+        targetSoftwareStack: "Mandated: BS EN ISO 19650 CDE (Autodesk Docs / EU Frankfurt Cloud) + Revit + Forma Embodied Carbon; Open to Golden Thread Audit Automation",
+        gtmActionTrigger: "EU Sovereign ACC CDE & CSRD Carbon Compliance Pursuit"
+    },
+    "proj-6": {
+        assignedContractors: ["Balfour Beatty", "Bouygues Travaux Publics", "Strabag", "Vinci", "Costain JV"],
+        targetSoftwareStack: "Mandated: Civil 3D + Autodesk Innovyze (InfoWorks) + BS EN ISO 19650 CDE + Solibri IFC 4.3 Checking; Open to Field Subcontractor QA",
+        gtmActionTrigger: "UK AMP8 Water & TEN-T Rail ISO 19650 Consulting Package"
+    },
+    "proj-7": {
+        assignedContractors: ["Siemens Energy", "Hitachi Energy", "Balfour Beatty Kilpatrick", "Prysmian EPC JV"],
+        targetSoftwareStack: "Mandated: AutoCAD Electrical + Civil 3D + Egnyte EU NIS2 Sovereign Repository + ACC; Open to Subsurface Utility (NUAR) 3D Mapping",
+        gtmActionTrigger: "HVDC Grid Corridor Engineering & NIS2 Cyber Governance"
+    },
+    "proj-8": {
+        assignedContractors: ["Multiplex", "Mace", "BAM UK & Ireland", "Skanska UK", "Arup / WSP Advisory"],
+        targetSoftwareStack: "Mandated: UK Building Safety Act Gateway 2/3 Golden Thread CDE (Autodesk Docs + Bluebeam Cloud) + Revit EPD Carbon Tracking",
+        gtmActionTrigger: "UK Gateway 2/3 Golden Thread Audit & Pinnacle LMS Enablement"
+    },
+    "proj-9": {
+        assignedContractors: ["Kajima Corporation", "Obayashi Corporation", "Takenaka", "Shimizu JV"],
+        targetSoftwareStack: "Mandated: MLIT BIM/CIM 3D Models + Revit + Civil 3D + Topcon/Trimble 3D Machine Control; Open to Automated Progress Tracking",
+        gtmActionTrigger: "APAC Semiconductor Cleanroom & Autonomous Civil BIM Package"
+    },
+    "proj-10": {
+        assignedContractors: ["CPB Contractors", "John Holland", "Lendlease", "Acciona", "Ghella Alliance"],
+        targetSoftwareStack: "Mandated: ISO 19650 Digital Engineering (NSW DE / VDAS) + Autodesk Construction Cloud + Civil 3D + Bluebeam Cloud",
+        gtmActionTrigger: "ANZ Transport Alliance ISO 19650 CDE & Digital Twin Handover"
+    }
+};
+
+(window.majorProjectsData || []).forEach(p => {
+    const gtm = window.PROJECT_GTM_ACCOUNT_MAP[p.id];
+    if (gtm) {
+        p.assignedContractors = Array.isArray(gtm.assignedContractors)
+            ? gtm.assignedContractors
+            : String(gtm.assignedContractors || '').split(/\s*[•,|]\s*/).filter(Boolean);
+        p.targetSoftwareStack = gtm.targetSoftwareStack;
+        p.gtmActionTrigger = gtm.gtmActionTrigger;
+    } else if (!Array.isArray(p.assignedContractors)) {
+        p.assignedContractors = p.assignedContractors
+            ? String(p.assignedContractors).split(/\s*[•,|]\s*/).filter(Boolean)
+            : ["Tier-1 EPC / GC Joint Venture"];
+    }
+});
+
+
